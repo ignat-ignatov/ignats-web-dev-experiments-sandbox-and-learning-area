@@ -1,0 +1,2114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Beautiful HTML Elements</title>
+
+    <link href="html-elements.css" rel="stylesheet">
+
+</head>
+
+<!-- Body begins here. -->
+
+<body>
+
+<!-- Floating sidebar menu. -->
+
+<nav class="floating-menu">
+<ul>
+    <li>
+        <a href="#elements">Elements and Tags</a>
+    </li>
+    <li>
+        <a href="#main-root">Main Root</a>
+        <ul>
+            <li><a href="#html">html</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#document-metadata">Document Metadata</a>
+        <ul>
+            <li><a href="#head">head</a></li>
+            <li><a href="#base">base</a></li>
+            <li><a href="#title">title</a></li>
+            <li><a href="#meta">meta</a></li>
+            <li><a href="#link">link</a></li>
+            <li><a href="#style">style</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#sectioning-root">Sectioning Root</a>
+        <ul>
+            <li><a href="#body">body</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#content-sectioning">Content Sectioning</a>
+        <ul>
+            <li><a href="#tbc">TBC</a></li>
+        </ul>
+    </li>
+</ul> 
+</nav>
+
+<!-- Main begins here. -->
+
+<main>
+
+<!-- Introduction begins here. -->
+
+<h1>Big Beautiful HTML Elements</h1>
+
+<p>
+    In this document I am listing all the HTML elements with the purpose of studying them.
+    <br>
+    <br>
+    I am using minimal styling in order to preserve the vanilla HTML feel.
+    <br>
+    <br>
+    The main body of information is gathered from W3Schools, MDN Web Docs, and the HTML Living Standard. There's a lot of copy/paste from those three websites.
+    <br>
+    <br>
+    The information there is not always as comprehensive or understandable as I need it to be, so I've also linked to complimentary resources and added additional explanations with the help of AI.
+    <br>
+    <br>
+    This document is meant to be viewed on a desktop browser for best experience.
+</p>
+
+<!-- Contents begin here. -->
+
+<h2 style="font-size: 1.5em; margin-top: 3em;">Contents:</h2>
+
+<ul style="font-size: 0.9em">
+    <li>
+        <a href="#elements">Elements and Tags</a>
+    </li>
+
+    <li>
+        <a href="#main-root">Main Root</a>
+        <ul>
+            <li><a href="#html">html</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="#document-metadata">Document Metadata</a>
+        <ul>
+            <li><a href="#head">head</a></li>
+            <li><a href="#base">base</a></li>
+            <li><a href="#title">title</a></li>
+            <li><a href="#meta">meta</a></li>
+            <li><a href="#link">link</a></li>
+            <li><a href="#style">style</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="#sectioning-root">Sectioning Root</a>
+        <ul>
+            <li><a href="#body">body</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="#content-sectioning">Content Sectioning</a>
+        <ul>
+            <li><a href="#tbc">TBC</a></li>
+        </ul>
+    </li>
+</ul>
+
+<hr>
+
+<!-- Explaining elements and tags. -->
+
+<h2 id="elements"><u>Elements and Tags</u></h2>
+
+<h3>Overview of elements and tags</h3>
+
+<p>
+    An element is a part of a webpage. In XML and HTML, an element may contain a data item or a chunk of text or an image, or perhaps nothing. A typical element includes an opening tag with some attributes, enclosed text content, and a closing tag.
+</p>
+
+<img src="images/anatomy-of-an-html-element.png" alt="Anatomy of and HTML element." style="display: block; margin: 2em auto 2em; border: 1px solid black; width: 100%; max-width: 600px; height: auto;">
+
+<p>
+    Elements and tags are not the same things. Tags begin or end an element in source code, whereas elements are part of the DOM, the document model for displaying the page in the browser.
+</p>
+
+<h4 class="spaced-sub-sub-title">Self-closing tags</h4>
+
+<p>
+    Besides the standard elements with opening and closing tags, HTML has self-closing tags, also known as void elements or empty elements.
+    <br>
+    <br>
+    Their purpose is simply to embed something into the page, to mark a specific point, or to specify metadata. Since they don't wrap around content, they don't need a closing tag.
+    <br>
+    <br>
+    For instance, an <code>&lt;img&gt;</code> tag embeds an image, and a <code>&lt;br&gt;</code> tag inserts a line break. All the information they need is provided through their attributes.
+    <br>
+    <br>
+    You will see these tags written in two ways:
+    <br>
+    HTML5 Style: <code>&lt;br&gt;</code>
+    <br>
+    XHTML Style: <code>&lt;br /&gt;</code>
+    <br>
+    <br>
+    In modern HTML5, the trailing slash (<code>/</code>) is optional and unnecessary. However, in the older and stricter XHTML, it was required to make the document valid XML.
+    <br>
+    <br>
+    Many developers still use the trailing slash (<code>&lt;img /&gt;</code>) out of habit or to maintain compatibility with older tools, but for modern web development, simply using <code>&lt;img&gt;</code> is perfectly fine.
+    <br>
+    <br>
+    The existing self-closing tags are <code>&lt;area&gt;</code>, <code>&lt;base&gt;</code>, <code>&lt;br&gt;</code>, <code>&lt;col&gt;</code>, <code>&lt;embed&gt;</code>, <code>&lt;hr&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;param&gt;</code>, <code>&lt;source&gt;</code>, <code>&lt;track&gt;</code>, and <code>&lt;wbr&gt;</code>.
+</p>
+
+<h4 class="spaced-sub-sub-title">Nesting</h4>
+
+<p>
+    You can also put elements inside other elements, which is called nesting. This is how you build the structure of a webpage. The entire content of your page is nested inside the <code>&lt;body&gt;</code> element, which itself is nested inside the <code>&lt;html&gt;</code> element.
+    <br>
+    <br>
+    Here's a simple example of nesting:
+</p>
+
+<pre style="margin-bottom: 2em;"><code>&lt;body&gt;
+  &lt;h1&gt;My Awesome Webpage&lt;/h1&gt;
+  &lt;p&gt;This is my first paragraph. I want to &lt;strong&gt;emphasize&lt;/strong&gt; this word.&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+
+<p>
+    In this example, the <code>&lt;strong&gt;</code> element is nested inside the <code>&lt;p&gt;</code> element to make the word "emphasize" bold.
+    <br>
+    <br>
+    Nesting elements correctly is fundamental to writing valid and semantic HTML. Think of it like a set of Russian dolls - some dolls fit inside others, but you can't just jam any doll into another. The rules are based on what type of content an element is designed to hold.
+    <br>
+    <br>
+    The main principle revolves around two categories of elements: block-level elements and inline elements.
+    <br>
+    <br>
+    Block-level elements create a "block" that takes up the full available width and starts on a new line.
+    <br>
+    <br>
+    Inline elements fit in a "line" of text and only take up as much width as they need.
+</p>
+
+<h5 class="spaced-sub-sub-title">The General Rules of Nesting are:</h5>
+
+<p>
+    <i>Block-in-Block:</i>
+    <br>
+    You can almost always nest a block-level element inside another block-level element. This is how page layouts are built.
+    <br>
+    <br>
+    <i>Inline-in-Block:</i>
+    <br>
+    You can nest inline elements inside block-level elements. This is very common, like putting a link (<code>&lt;a&gt;</code>) inside a paragraph (<code>&lt;p&gt;</code>).
+    <br>
+    <br>
+    <i>Inline-in-Inline:</i>
+    <br>
+    You can usually nest inline elements inside other inline elements.
+    <br>
+    <br>
+    <i>Block-in-Inline (Forbidden):</i>
+    <br>
+    You cannot nest a block-level element inside an inline element. It's semantically incorrect and will lead to unpredictable browser behavior.
+    <br>
+    <br>
+    <br>
+    The block-level elements are <code>&lt;address&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;blockquote&gt;</code>, <code>&lt;details&gt;</code>, <code>&lt;dialog&gt;</code>, <code>&lt;dd&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code>, <code>&lt;fieldset&gt;</code>, <code>&lt;figcaption&gt;</code>, <code>&lt;figure&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code>, <code>&lt;h6&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;hgroup&gt;</code>, <code>&lt;hr&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;pre&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;table&gt;</code>, and <code>&lt;ul&gt;</code>.
+    <br>
+    <br>
+    The inline elements are <code>&lt;a&gt;</code>, <code>&lt;abbr&gt;</code>, <code>&lt;b&gt;</code>, <code>&lt;bdo&gt;</code>, <code>&lt;br&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;cite&gt;</code>, <code>&lt;code&gt;</code>, <code>&lt;dfn&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;i&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;kbd&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;map&gt;</code>, <code>&lt;object&gt;</code>, <code>&lt;output&gt;</code>, <code>&lt;q&gt;</code>, <code>&lt;samp&gt;</code>, <code>&lt;script&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;small&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;sub&gt;</code>, <code>&lt;sup&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;time&gt;</code>, and <code>&lt;var&gt;</code>.
+</p>
+
+<hr>
+
+<!-- Listing the tags from here on. -->
+
+<!-- Main Root Tag -->
+
+<h2 id="main-root">Main Root</h2>
+
+<!-- <html> -->
+
+<h3 id="html">&lt;html&gt;</h3>
+
+<h4>Description:</h4>
+
+<p>
+    The <code>&lt;html&gt;</code> element represents the root (top-level element) of an HTML document, so it is also referred to as the <em>root element</em>. It signals to the browser that the document is, in fact, an HTML page. All other elements must be descendants of (wrapped inside) this element. 
+    <br>
+    <br>
+    There can be only one <code>&lt;html&gt;</code> element in a document.
+</p>
+
+<h4 class="spaced-sub-title">Attributes:</h4>
+
+<dl class="spaced-dl">
+    <dt><code>xmlns</code></dt>
+    <dd>
+        <p>
+            Specifies the XML Namespace of the document. Default value is <code>"http://www.w3.org/1999/xhtml"</code>. This is required in documents parsed with XML parsers, and optional in text/html documents.
+            <br>
+            <br>
+            It was a requirement in XHTML (a stricter, XML-based variant of HTML). In modern HTML5, this attribute is optional because the HTML parser automatically handles it. However, you might still encounter it in older codebases or when working with XML-based formats. 
+            <br>
+            <br>
+            For standard HTML5 documents, omitting it is perfectly acceptable and even recommended for simplicity.
+            <br>
+            <br>
+            Example:
+        </p>
+<pre><code>&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;</code></pre>
+    </dd>
+
+    <dt><code>lang</code></dt>
+    <dd>
+        <p>
+            The <code>lang</code> attribute specifies the primary language of the content within the document. It's important to include it because this information is vital for:
+            <br>
+            <br>
+            <i>Accessibility:</i>
+            <br>
+            Screen readers use the lang attribute to pronounce the text correctly.
+            <br>
+            <br>
+            <i>Search Engines:</i>
+            <br>
+            SEO crawlers use this attribute to understand the language of the page and serve it to the appropriate audience.
+            <br>
+            <br>
+            <i>Browsers:</i>
+            <br>
+            Browsers can use this information to suggest translation options or select appropriate fonts.
+            <br>
+            <br>
+            Example:
+        </p>
+<pre><code>&lt;html lang="en"&gt;</code></pre>
+    </dd>
+</dl>
+
+<h4 class="spaced-sub-title">Example:</h4>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;title&gt;Title of the document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/html" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_html.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/semantics.html#the-html-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- Document Metadata Tags -->
+
+<h2 id="document-metadata">Document Metadata</h2>
+
+<p>
+    Metadata contains information about the page. This includes information about styles, scripts and data to help software (search engines, browsers, etc.) use and render the page.
+    <br>
+    <br>
+    Metadata for styles and scripts may be defined in the page or linked to another file that has the information.
+</p>
+
+<!-- <head> -->
+
+<h3 id="head" class="spaced-sub-title">&lt;head&gt;</h3>
+
+<h4>Description:</h4>
+
+<p>
+    The <code>&lt;head&gt;</code> element is a container for metadata (data about data) and is placed between the <code>&lt;html&gt;</code> tag and the <code>&lt;body&gt;</code> 
+    tag.
+    <br>
+    <br>
+    Metadata is data about the HTML document. Metadata is not displayed.
+    <br>
+    <br>
+    Metadata typically define the document title, character set, styles, scripts, and other meta information.
+    <br>
+    <br>
+    The following elements can go inside the <code>&lt;head&gt;</code> element:
+</p>
+
+<ul>
+    <li><code>&lt;title&gt;</code> (required in every HTML document)</li>
+    <li><code>&lt;style&gt;</code></li>
+    <li><code>&lt;base&gt;</code></li>
+    <li><code>&lt;link&gt;</code></li>
+    <li><code>&lt;meta&gt;</code></li>
+    <li><code>&lt;script&gt;</code></li>
+    <li><code>&lt;noscript&gt;</code></li>
+    <li><code>&lt;template&gt;</code></li>
+</ul>
+
+<h4 class="spaced-sub-title">Example:</h4>
+
+<pre><code>&lt;!doctype html&gt;
+&lt;html lang="en-US"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width" /&gt;
+    &lt;title&gt;Document title&lt;/title&gt;
+&lt;/head&gt;
+&lt;/html&gt;</code></pre>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/head" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_head.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/semantics.html#the-head-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <base> -->
+
+<h3 id="base">&lt;base&gt;</h3>
+
+<h4>Description:</h4>
+
+<p>
+    The <code>&lt;base&gt;</code> tag specifies the base URL and/or target for all relative URLs in a document.
+    <br>
+    <br>
+    The <code>&lt;base&gt;</code> tag must have either an <code>href</code> or a <code>target</code> attribute present, or both.
+    <br>
+    <br>
+    There can only be one single <code>&lt;base&gt;</code> element in a document, and it must be inside the <code>&lt;head&gt;</code> element.
+    <br>
+    <br>
+    If multiple <code>&lt;base&gt;</code> elements are used, only the first <code>href</code> and first <code>target</code> are obeyed — all others are ignored.
+</p>
+
+<h4 class="spaced-sub-title">Use Cases:</h4>
+
+<p>
+    The <code>&lt;base&gt;</code> element is particularly useful in several scenarios:
+    <br>
+    <br>
+    <i>Simplified Asset Management:</i>
+    <br>
+    In large websites with a consistent directory structure for assets like images, stylesheets, and scripts, you can set a base URL pointing to the assets folder. This allows you to use simpler relative paths in your code.
+    <br>
+    <br>
+    <i>Content Migration and Staging:</i>
+    <br>
+    When moving a website from a staging server to a live domain, you only need to change the href value in the <code>&lt;base&gt;</code> element instead of updating every single link throughout the site.
+    <br>
+    <br>
+    <i>Single-Page Applications (SPAs):</i>
+    <br>
+    In some SPA architectures, where the URL in the address bar changes dynamically without full page reloads, the <code>&lt;base&gt;</code> tag can help ensure that relative resource URLs are always resolved correctly relative to the application's root.
+    <br>
+    <br>
+    <i>Mirrored Content:</i>
+    <br>
+    If the same content is served from multiple domains or subdomains, the <code>&lt;base&gt;</code> element can ensure that all relative links point back to a canonical domain, which can also be beneficial for SEO.
+</p>
+
+<h4 class="spaced-sub-title">Attributes:</h4>
+
+<dl class="spaced-dl">
+    <dt><code>href</code></dt>
+    <dd>
+        <p>
+            The base URL to be used throughout the document for relative URLs. Absolute and relative URLs are allowed. <code>data:</code> and <code>javascript:</code> URLs are not allowed.
+        </p>
+    </dd>
+
+    <dt><code>target</code></dt>
+    <dd>
+        <p>
+            A keyword or author-defined name of the default browsing context to show the results of navigation from <code>&lt;a&gt;</code>, <code>&lt;area&gt;</code>, or <code>&lt;form&gt;</code> elements without explicit <code>target</code> attributes. The following keywords have special meanings:
+        </p>
+        <ul>
+            <li><code>_self</code> (default): Show the result in the current browsing context.</li>
+            <li><code>_blank</code>: Show the result in a new, unnamed browsing context.</li>
+            <li><code>_parent</code>: Show the result in the parent browsing context of the current one, if the current page is inside a frame. If there is no parent, acts the same as <code>_self</code>.</li>
+            <li><code>_top</code>: Show the result in the topmost browsing context (the browsing context that is an ancestor of the current one and has no parent). If there is no parent, acts the same as <code>_self</code>.</li>
+        </ul>
+    </dd>
+</dl>
+
+<h4 class="spaced-sub-title">Example:</h4>
+
+<pre><code>&lt;head&gt;
+    &lt;base href="https://www.example.com/" target="_blank"&gt;
+&lt;/head&gt;</code></pre>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/base" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_base.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/semantics.html#the-base-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <title> -->
+
+<h3 id="title">&lt;title&gt;</h3>
+
+<h4>Description:</h4>
+
+<p>
+    The <code>&lt;title&gt;</code> HTML element defines the document's title that is shown in a browser's title bar or a page's tab. It only contains text; HTML tags within the element, if any, are also treated as plain text.
+    <br>
+    <br>
+    The contents of a page title can have significant implications for search engine optimization (SEO).
+    <br>
+    <br>
+    Search engines typically display about the first 55 to 60 characters of a page title.
+    <br>
+    <br>
+    When users bookmark a page, the title is used as the default name for the bookmark.
+</p>
+
+<h4 class="spaced-sub-title">Dynamic Titles</h4>
+
+<p>
+    Titles can be dynamically updated using JavaScript, which is useful for single-page applications (SPAs) or pages with changing content.
+    <br>
+    <br>
+    That is done with JavaScript by using the <code>document.title</code> property.*
+    <br>
+    <br>
+    * <i>In the context of web development, document properties refer to the attributes and methods associated with the <code>document</code> object in the DOM (Document Object Model). The <code>document</code> object represents the entire HTML or XML document loaded in the browser and provides access to its structure, content, and metadata.</i>
+    <br>
+    <br>
+    Here's a simple <a href="dynamic-title.html" target="_blank">example</a>.
+</p>
+
+<h5 class="spaced-sub-sub-title">Key considerations for dynamic titles:</h5>
+
+<p>
+    Search engines may not index dynamically updated titles if they are changed after the page loads. Use server-side rendering for critical titles.
+    <br>
+    <br>
+    Some browsers may cache the original title, so dynamic changes might not always be reflected immediately in bookmarks or history.
+</p>
+
+<h4 class="spaced-sub-title">Example:</h4>
+
+<pre><code>&lt;title&gt;Grandma's Heavy Metal Festival Journal&lt;/title&gt;</code></pre>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/title" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_title.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/semantics.html#the-title-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <meta> -->
+
+<h3 id="meta">&lt;meta&gt;</h3>
+
+<h4>Description:</h4>
+
+<p>
+    The <code>&lt;meta&gt;</code> tag defines metadata about an HTML document. Metadata is data (information) about data.
+    <br>
+    <br>
+    <code>&lt;meta&gt;</code> tags always go inside the <code>&lt;head&gt;</code> element, and are typically used to specify character set, page description, keywords, author of the document, and viewport settings.
+    <br>
+    <br>
+    Metadata will not be displayed on the page, but is machine parsable.
+    <br>
+    <br>
+    Metadata is used by browsers (how to display content or reload page), search engines (keywords), and other web services.
+</p>
+
+<h4 class="spaced-sub-title">Attributes:</h4>
+
+<dl class="spaced-dl">
+    <dt><code>charset</code></dt>
+    <dd>
+        <p>
+            The <code>charset</code> attribute specifies the character encoding for the HTML document.
+            <br>
+            The HTML5 specification encourages web developers to use the UTF-8 character set, which covers almost all of the characters and symbols in the world!
+            <br>
+            <br>
+            Example:
+        </p>
+<pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+    </dd>
+
+    <dt><code>content</code></dt>
+    <dd>
+        <p>
+            The <code>content</code> attribute gives the value associated with the <code>http-equiv</code> or <code>name</code> attribute.
+            <br>
+            <br>
+            Examples:
+        </p>
+<pre><code>&lt;meta http-equiv=&quot;refresh&quot; content=&quot;30&quot;&gt;
+
+&lt;meta name=&quot;author&quot; content=&quot;John Doe&quot;&gt;</code></pre>
+    </dd>
+
+    <dt><code>name</code></dt>
+    <dd>
+        <p>
+            The <code>name</code> attribute specifies the name for the metadata.
+            <br>
+            <br>
+            The <code>name</code> attribute specifies a name for the information/value of the <code>content</code> attribute.
+            <br>
+            <br>
+            If the <code>http-equiv</code> attribute is set, the <code>name</code> attribute should not be set in the same tag.
+            <br>
+            <br>
+            The <code>&lt;meta&gt;</code> tag and its <code>name</code> attribute are used for a variety of purposes, and the values associated with <code>name</code> can come from different sources, including the HTML Specification, the CSS Device Adaptation specification, the <a href="https://wiki.whatwg.org/wiki/MetaExtensions#Meta_Name_Extensions" target="_blank">WHATWG MetaExtensions Wiki</a>, and others.
+            <br>
+            <br>
+            While values defined in the HTML specification are the safest and most universally supported, many values from other specifications or the WHATWG MetaExtensions wiki are widely adopted and provide useful functionality.
+            <br>
+            <br>
+            Check compatibility using resources like <a href="https://caniuse.com/" target="_blank">Can I Use</a> or browser documentation.
+            <br>
+            <br>
+            If a value provides functionality you need (e.g., <code>theme-color</code> for branding), it's worth using even if it's not part of the HTML specification.
+            <br>
+            <br>
+            For less widely supported values, provide fallbacks or ensure your site functions correctly even if the metadata is ignored.
+            <br>
+            <br>
+            <strong><i>Meta names defined in the HTML specification:</i></strong>
+        </p>
+
+        <ul class="spaced-ul">
+            <li>
+                <p>
+                    <code>application-name</code>
+                    <br>
+                    <br>
+                    Specifies the name of the Web application that the page represents.
+                    <br>
+                    <br>
+                    Browsers may use this to identify the application running in the web page. It is different from the <code>&lt;title&gt;</code> element, which may contain an application (or website) name, but a <code>&lt;title&gt;</code> may add contextual information like a document name or a status.
+                    <br>
+                    <br>
+                    Some browsers may use the <code>application-name</code> value in their UI, such as when displaying pinned tabs or bookmarks.
+                    <br>
+                    <br>
+                    Individual pages shouldn't define their own, unique application-name. 
+                    <br>
+                    <br>
+                    Example:
+                </p>
+<pre style="margin-bottom: 2em;"><code>&lt;meta name="application-name" content="My Web App"&gt;</code></pre>
+                <p>
+                    To provide translations, use multiple <code>&lt;meta&gt;</code> tags with the lang attribute for each language:
+                </p>
+<pre style="margin-bottom: 2em;"><code>&lt;meta name=&quot;application-name&quot; content=&quot;Weather Wizard&quot; lang=&quot;en&quot; /&gt;
+
+&lt;meta name=&quot;application-name&quot; content=&quot;Mago del Clima&quot; lang=&quot;es&quot; /&gt;</code></pre>
+                <p>
+                    Other Use Cases:
+                    <br>
+                    <br>
+                    In PWAs, the <code>application-name</code> can complement other metadata (like the manifest file) to define the app's identity.
+                    <br>
+                    <br>
+                    PWAs often use a <code>manifest.json</code> file to define the app name, but the <code>application-name</code> meta tag can serve as a fallback or additional identifier.
+                    <br>
+                    <br>
+                    On Windows the <code>application-name</code> can be used in conjunction with other meta tags (like msapplication-* tags) to define the app's appearance and behavior on the platform (like the Start Menu or taskbar). 
+                    <br>
+                    <br>
+                    Example:
+                </p>
+<pre><code>&lt;meta name=&quot;application-name&quot; content=&quot;My Web App&quot;&gt;
+&lt;meta name=&quot;msapplication-TileColor&quot; content=&quot;#2b5797&quot;&gt;
+&lt;meta name=&quot;msapplication-TileImage&quot; content=&quot;tile.png&quot;&gt;</code></pre>
+            </li>
+
+            <li>
+                <p>
+                    <code>author</code>
+                    <br>
+                    <br>
+                    Specifies the name of the author of the document.
+                    <br>
+                    <br>
+                    Example:
+                </p>
+<pre><code>&lt;meta name="author" content="Ignat Ignatov"&gt;</code></pre>
+            </li>
+
+            <li>
+                <p>
+                    <code>color-scheme</code>
+                    <br>
+                    <br>
+                    Specifies one or more color schemes with which the document is compatible. The browser will use this information in tandem with the user's browser or device settings to determine what colors to use for everything from background and foregrounds to form controls and scrollbars. 
+                    <br>
+                    <br>
+                    The primary use for <code>&lt;meta name="color-scheme"&gt;</code> is to indicate compatibility and order of preference for light and dark color modes.
+                    <br>
+                    <br>
+                    Example:
+                </p>
+<pre><code>&lt;meta name=&quot;color-scheme&quot; content=&quot;light dark&quot;&gt;</code></pre>
+                <p>
+                    This example specifies that the website supports both light and dark modes.
+                    <br>
+                    <br>
+                    You can use the <code>prefers-color-scheme</code> media query in your CSS to define custom styles for light and dark modes.
+                    <br>
+                    <br>
+                    Example:
+                </p>
+<pre style="margin-bottom: 2em;"><code>&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta name=&quot;color-scheme&quot; content=&quot;light dark&quot;&gt;
+    &lt;title&gt;Color Scheme Example&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            background-color: white;
+            color: black;
+        }
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: black;
+                color: white;
+            }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+                <p>
+                    <code>content</code> Values:
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            <code>normal</code>
+                            <br>
+                            <br>
+                            The document is unaware of color schemes and should be rendered using the default color palette.
+                        </p>
+                    </li>
+                    
+                    <li>
+                        <p>
+                            <code>light</code>, <code>dark</code>, <code>light dark</code>, <code>dark light</code>
+                            <br>
+                            <br>
+                            One or more color schemes supported by the document. Multiple color schemes indicates that the first scheme is preferred by the document, but that the second scheme is acceptable if the user prefers it. Specifying the same color scheme multiple times has the same effect as specifying it once.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <code>only light</code>
+                            <br>
+                            <br>
+                            Indicates that the document only supports light mode, with a light background and dark foreground colors. <code>only dark</code> is invalid, because forcing a document to render in dark mode when it isn't compatible can result in unreadable content and all major browsers default to light mode if not otherwise configured.
+                        </p>
+                    </li>
+                </ul>
+
+                <p style="margin-top: 3em;">
+                    Other Values:
+                </p>
+
+                <ul>
+                    <li>
+                        <p>
+                            <code>media</code> (Optional)
+                            <br>
+                            <br>
+                            Any valid media type or query. If provided, the options for the document's color scheme defined in the content attribute are suggested to the browser when the media query matches. This is mostly useful for the <code>prefers-color-scheme</code> CSS media feature.
+                        </p>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <p>
+                    <code>description</code>
+                    <br>
+                    <br>
+                    Specifies a description of the page. Search engines can pick up this description to show with the results of searches.
+                    <br>
+                    <br>
+                    Example:
+                </p>
+<pre><code>&lt;meta name="description" content="An HTML website, haha."</code></pre>
+            </li>
+
+            <li>
+                <p>
+                    <code>generator</code>
+                    <br>
+                    <br>
+                    Specifies one of the software packages used to generate the document (not used on hand-authored pages).
+                    <br>
+                    <br>
+                    Example:
+                </p>
+<pre><code>&lt;meta name="generator" content="WordPress 6.8"&gt;</code></pre>
+            </li>
+
+            <li>
+                <p>
+                    <code>keywords</code>
+                    <br>
+                    <br>
+                    Specifies a comma-separated list of keywords - relevant to the page (Informs search engines what the page is about).
+                    <br>
+                    <br>
+                    Example:
+                </p>
+<pre><code>&lt;meta name="keywords" content="HTML, HTML tags, tag reference"&gt;</code></pre>
+            </li>
+
+            <li>
+                <p>
+                    <code>referrer</code>
+                    <br>
+                    <br>
+                    The <code>referrer</code> meta tag is used to control the behavior of the <code>Referer</code> HTTP header, which is sent by the browser when navigating from one page to another or when making requests (e.g., for images, scripts, or other resources). The <code>Referer</code> header contains the URL of the page that initiated the request, and the <code>referrer</code> meta tag allows you to specify how much of this information is shared.
+                    <br>
+                    <br>
+                    This tag is particularly useful for managing privacy, security, and analytics, as it gives you control over what information is sent to external websites or servers.
+                    <br>
+                    <br>
+                    Example:
+                </p>
+<pre style="margin-bottom: 3em;"><code>&lt;meta name=&quot;referrer&quot; content=&quot;origin&quot; /&gt;</code></pre>
+                <p>
+                    More resources:
+                    <br>
+                    <a href="https://w3c.github.io/webappsec-referrer-policy/" target="_blank">W3C's Referrer Policy Specification</a>
+                    <br>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Referer" target="_blank">Referrer header (MDN article)</a>
+                    <br>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy" target="_blank">Referrer-Policy header (MDN article)</a>
+                    <br>
+                    <a href="https://web.dev/articles/referrer-best-practices" target="_blank">Referer and Referrer-Policy best practices (web.dev article)</a>
+                    <a href="https://en.wikipedia.org/wiki/HTTP_referer" target="_blank">HTTP referer (Wikipedia article)</a>
+                    <br>
+                    <br>
+                    <br>
+                    Values:
+                </p>
+                <ul class="spaced-ul">
+                    <li>
+                        <p>
+                            <code>no-refferer</code>
+                            <br>
+                            <br>
+                            Means that the <code>Referer</code> header will not be sent.
+                            <br>
+                            <br>
+                            Maximum privacy; no referrer information is shared.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <code>no-refferer-when-downgrade</code>
+                            <br>
+                            <br>
+                            The <code>Referer</code> header is sent only for requests made over the same or more secure protocols (e.g., HTTPS to HTTPS). It is not sent when navigating from HTTPS to HTTP.
+                            <br>
+                            <br>
+                            Default behavior in most browsers; balances privacy and functionality.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <code>origin</code>
+                            <br>
+                            <br>
+                            Only the origin (protocol, domain, and port) of the referrer is sent, not the full URL.
+                            <br>
+                            <br>
+                            For example if the referrer is <code>https://example.com/page.html</code>, only <code>https://example.com</code> is sent.
+                            <br>
+                            <br>
+                            Share minimal information while maintaining some context.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <code>origin-when-cross-origin</code>
+                            <br>
+                            <br>
+                            Sends the full URL for same-origin requests but only the origin for cross-origin requests.
+                            <br>
+                            <br>
+                            For example:
+                            <br>
+                            <br>
+                            Same-origin: <code>https://example.com/page.html</code> → Sent: <code>https://example.com/page.html</code>
+                            <br>
+                            <br>
+                            Cross-origin: <code>https://example.com/page.html</code> → Sent: <code>https://example.com</code>
+                            <br>
+                            <br>
+                            Balance between privacy and functionality.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <code>same-origin</code>
+                            <br>
+                            <br>
+                            The <code>Referer</code> header is sent only for same-origin requests. It is not sent for cross-origin requests.
+                            <br>
+                            <br>
+                            Prevent referrer information from being shared with external sites.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <code>strict-origin</code>
+                            <br>
+                            <br>
+                            Sends only the origin of the referrer, but only for requests made over the same or more secure protocols (e.g., HTTPS to HTTPS). It is not sent when navigating from HTTPS to HTTP.
+                            <br>
+                            <br>
+                            Enhanced privacy and security.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <code>strict-origin-when-cross-origin</code>
+                            <br>
+                            <br>
+                            Sends the full URL for same-origin requests, only the origin for cross-origin requests, and nothing when navigating from HTTPS to HTTP.
+                            <br>
+                            <br>
+                            A good balance of privacy, security, and functionality.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <code>unsafe-url</code>
+                            <br>
+                            <br>
+                            Sends the full URL of the referrer for all requests, regardless of protocol or origin (but not the fragment, password, or username). This case is unsafe because it can leak origins and paths from TLS-protected resources to insecure origins.
+                            <br>
+                            <br>
+                            Maximum functionality, but least privacy.
+                        </p>
+                    </li>
+                </ul>
+
+                <p style="margin-top: 3em;">
+                    Example Use Cases:
+                    <br>
+                    <br>
+                    <i>Privacy-Focused Websites:</i>
+                    <br>
+                    Use <code>no-referrer</code> or <code>strict-origin</code> to prevent sensitive information from being leaked in the <code>Referer</code> header.
+                    <br>
+                    <br>
+                    <i>Analytics and Tracking:</i>
+                    <br>
+                    Use <code>origin</code> or <code>origin-when-cross-origin</code> to provide minimal but useful referrer information for analytics purposes.
+                    <br>
+                    <br>
+                    <i>Security-Sensitive Applications:</i>
+                    <br>
+                    Use <code>strict-origin</code> or <code>strict-origin-when-cross-origin</code> to ensure referrer information is not sent to less secure protocols (e.g., HTTP).
+                    <br>
+                    <br>
+                    <i>Maximum Functionality:</i>
+                    <br>
+                    Use <code>unsafe-url</code> if you need to send the full URL in all cases (e.g., for detailed analytics), but be aware of the privacy implications.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>theme-color</code>
+                    <br>
+                    <br>
+                    The theme-color value for the name attribute of the <code>&lt;meta&gt;</code> element indicates a suggested color that user agents should use to customize the display of the page or of the surrounding user interface. If specified, you define a theme color using a content attribute in the <code>&lt;meta&gt;</code> element as a CSS <code>&lt;color&gt;</code> value.
+                    <br>
+                    <br>
+                    You can set the media to which the theme color metadata applies, include the media attribute with a valid media query list.
+                    <br>
+                    <br>
+                    Mainly supported for mobile browsers and PWAs.
+                    <br>
+                    <br>
+                    Example:
+                </p>
+<pre><code>&lt;meta
+  name=&quot;theme-color&quot;
+  content=&quot;cornflowerblue&quot;
+  media=&quot;(prefers-color-scheme: light)&quot; /&gt;
+&lt;meta
+  name=&quot;theme-color&quot;
+  content=&quot;dimgray&quot;
+  media=&quot;(prefers-color-scheme: dark)&quot; /&gt;</code></pre>
+                <p>
+                    Example of effect:
+                    <br>
+                    <img src="images/theme-color.png" alt="Anatomy of and HTML element." style="display: block; margin: 2em auto 2em; border: 1px solid black; width: 100%;">
+                </p>
+            </li>
+        </ul>
+
+        <p style="margin-top: 3em;">
+            <strong><i>Meta names defined in the CSS Device Adaptation specification:</i></strong>
+        </p>
+
+        <ul class="spaced-ul">
+            <li>
+                <p>
+                    <code>viewport</code>
+                    <br>
+                    <br>
+                    Controls the viewport (the user's visible area of a web page).
+                    <br>
+                    <br>
+                    The viewport varies with the device, and will be smaller on a mobile phone than on a computer screen.
+                    <br>
+                    <br>
+                    You should include the following <code>&lt;meta&gt;</code> viewport element in all your web pages:
+                </p>
+<pre><code>&lt;meta name="viewport" content="width=device-width initial-scale=1.0"&gt;</code></pre>
+                <p>
+                    A <code>&lt;meta&gt;</code> viewport element gives the browser instructions on how to control the page's dimensions and scaling.
+                    <br>
+                    <br>
+                    The <code>width=device-width</code> part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+                    <br>
+                    <br>
+                    The <code>initial-scale=1.0</code> part sets the initial zoom level when the page is first loaded by the browser.
+                    <br>
+                    <br>
+                    Values:
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            <code>width</code>
+                            <br>
+                            <br>
+                            Defines the pixel width of the viewport that you want the website to be rendered at. It can be a positive whole number or the keyword <code>device-width</code>.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <code>height</code>
+                            <br>
+                            <br>
+                            Defines the height of the viewport. It can be a positive whole number or the keyword <code>device-height</code>. This is not used by any browser.
+                        </p>
+                    </li>
+                    
+                    <li>
+                        <p>
+                            <code>initial-scale</code>
+                            <br>
+                            <br>
+                            Defines the ratio between the device width (<code>device-width</code> in portrait mode or <code>device-height</code> in landscape mode) and the viewport size. It can be a number between <code>0.0</code> and <code>10.0</code>.
+                        </p>
+                    </li>
+                    
+                    <li>
+                        <p>
+                            <code>maximum-scale</code>
+                            <br>
+                            <br>
+                            Defines the minimum zoom level. It must be smaller or equal to the <code>maximum-scale</code> or the behavior is undefined. Browser settings can ignore this rule, and iOS10+ ignores it by default. It can be a number between <code>0.0</code> and <code>10.0</code>.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <code>user-scalable</code>
+                            <br>
+                            <br>
+                            A boolean indicating if the user can zoom the web page. Browser settings can ignore this rule, and iOS10+ ignores it by default. It can be either <code>yes</code> or <code>no</code>, defaulting to <code>yes</code>.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <code>viewport-fit</code>
+                            <br>
+                            <br>
+                            Defines the viewable portions of the web page. It can be one of the keywords <code>auto</code>, <code>contain</code>, or <code>cover</code>.
+                        </p>
+                        <ul style="margin-top: 2em;">
+                            <li>
+                                <p>
+                                    <code>auto</code>
+                                    <br>
+                                     Doesn't affect the initial layout viewport, and the whole web page is viewable.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <code>contain</code>
+                                    <br>
+                                    The viewport is scaled to fit the largest rectangle inscribed within the display.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <code>cover</code>
+                                    <br>
+                                    The viewport is scaled to fill the device display. It's highly recommended to use the safe area inset variables to ensure that important content doesn't end up outside the display.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        
+        <p style="margin-top: 3em;">
+            The <a href="https://wiki.whatwg.org/wiki/MetaExtensions" target="_blank">WHATWG Wiki MetaExtensions page</a> contains a large set of non-standard metadata names.
+            <br>
+            <br>
+            Some of the names included are used quite commonly in practice.
+            <br>
+            <br>
+            Some notable examples:
+        </p>
+
+        <ul class="spaced-ul">
+            <li>
+                <p>
+                    <code>creator</code>
+                    <br>
+                    <br>
+                    The name of the creator of the document, such as an organization or institution. If there are more than one, several <code>&lt;meta&gt;</code> elements should be used.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>publisher</code>
+                    <br>
+                    <br>
+                    The document publisher's name.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>robots</code>
+                    <br>
+                    <br>
+                    A comma-separated list of values defining the crawl behavior that cooperative crawlers (or "robots") should use with the page.
+                    <br>
+                    <br>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta/name/robots" target="_blank">More info.</a>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>googlebot</code>
+                    <br>
+                    <br>
+                    A synonym of <code>robots</code>, is only followed by Googlebot (the indexing crawler for Google).
+                </p>
+            </li>
+        </ul>
+    </dd>
+
+    <dt><code>http-equiv</code></dt>
+    <dd>
+        <p>
+            The <code>http-equiv</code> attribute provides an HTTP header for the information/value of the content attribute.
+            <br>
+            <br>
+            The <code>http-equiv</code> attribute can be used to simulate an HTTP response header.
+            <br>
+            <br>
+            Values:
+        </p>
+
+        <ul class="spaced-ul">
+            <li>
+                <p>
+                    <code>content-security-policy</code>
+                    <br>
+                    <br>
+                    Specifies a content policy for the document.
+                    <br>
+                    <br>
+                    Example:
+                </p>
+<pre><code>&lt;meta http-equiv="content-security-policy" content="default-src 'self'"&gt;</code></pre>
+                <p>
+                    Official Reference: <a href="https://content-security-policy.com">https://content-security-policy.com</a>
+                    <br>
+                    <br>
+                    More resources:
+                    <br>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy" target="_blank">Content-Security-Policy (CSP) header (MDN article)</a>
+                    <br>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP" target="_blank">Content Security Policy (CSP) (MDN article guide)</a>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>content-type</code>
+                    <br>
+                    <br>
+                    Specifies the character encoding for the document.
+                    <br>
+                    <br>
+                    Example:
+                </p>
+<pre><code>&lt;meta http-quiv="content-type" content="text/html; charset=UTF-8"&gt;</code></pre>
+                <p>
+                    It's the same as <code>&lt;meta charset="utf-8"/&gt;</code>, so best to use <code>charset</code>.
+                    <br>
+                    <br>
+                    Source: <a href="https://stackoverflow.com/questions/4696499/meta-charset-utf-8-vs-meta-http-equiv-content-type">Stack Overflow</a>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>default-style</code>
+                    <br>
+                    <br>
+                    Specifies the preferred style sheet to use.
+                    <br>
+                    <br>
+                    Example:
+                </p>
+<pre><code>&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="default-style" content="Light mode"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;link rel="stylesheet" href="dark.css" title="Dark mode"&gt;
+    &lt;link rel="stylesheet" href="light.css" title="Light mode"&gt;
+&lt;/head&gt;</code></pre>
+                <p>
+                    The value of the <code>content</code> attribute must match the value of the <code>title</code> attribute on a <code>&lt;link&gt;</code> element in the same document, or it must match the value of the <code>title</code> attribute on a style element in the same document.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>refresh</code>
+                    <br>
+                    <br>
+                    Defines a time interval for the document to refresh itself.
+                    <br>
+                    <br>
+                    Example:
+                </p>
+<pre><code>&lt;meta http-equiv="refresh" content="300"&gt;</code></pre>
+                <p>
+                    The value <code>"refresh"</code> should be used carefully, as it takes the control of a page away from the user. Using <code>"refresh"</code> will cause a failure in W3C's Web Content Accessibility Guidelines.
+                </p>
+            </li>
+        </ul>
+    </dd>
+</dl>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_meta.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/semantics.html#the-meta-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <link> -->
+
+<h3 id="link">&lt;link&gt;</h3>
+
+<h4>Description:</h4>
+
+<p>
+    The <code>&lt;link&gt;</code> HTML element specifies relationships between the current document and an external resource. This element is most commonly used to link to stylesheets, but is also used to establish site icons (both <code>"favicon"</code> style icons and icons for the home screen and apps on mobile devices) among other things.
+</p>
+
+<h4 class="spaced-sub-title">Attributes:</h4>
+
+<dl class="spaced-dl">
+    <dt><code>as</code></dt>
+    <dd>
+        <p>
+            This attribute is required when <code>rel="preload"</code> has been set on the <code>&lt;link&gt;</code> element, optional when <code>rel="modulepreload"</code> has been set, and otherwise should not be used. It specifies the type of content being loaded by the <code>&lt;link&gt;</code>, which is necessary for request matching, application of correct content security policy, and setting of correct <code>Accept</code> request header.
+        </p>
+    </dd>
+
+    <dt><code>blocking</code></dt>
+    <dd>
+        <p>
+            This attribute explicitly indicates that certain operations should be blocked on the fetching of an external resource. It must only be used when the rel attribute contains expect or stylesheet keywords. The operations that are to be blocked must be a space-separated list of blocking tokens listed below.
+        </p>
+    </dd>
+
+    <dt><code>crossorigin</code></dt>
+    <dd>
+        <p>
+            This enumerated attribute indicates whether CORS must be used when fetching the resource. CORS-enabled images can be reused in the <code>&lt;canvas&gt;</code> element without being tainted.
+            <br>
+            <br>
+            Values:
+        </p>
+        <ul class="spaced-ul">
+            <li>
+                <p>
+                    <code>anonymous</code>
+                    <br>
+                    <br>
+                    A cross-origin request (i.e., with an <code>Origin</code> HTTP header) is performed, but no credential is sent (i.e., no cookie, X.509 certificate, or HTTP Basic authentication). If the server does not give credentials to the origin site (by not setting the <code>Access-Control-Allow-Origin</code> HTTP header) the resource will be tainted and its usage restricted.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>use-credentials</code>
+                    <br>
+                    <br>
+                    A cross-origin request (i.e., with an <code>Origin</code> HTTP header) is performed along with a credential sent (i.e., a cookie, certificate, and/or HTTP Basic authentication is performed). If the server does not give credentials to the origin site (through <code>Access-Control-Allow-Credentials</code> HTTP header), the resource will be tainted and its usage restricted.
+                </p>
+            </li>
+        </ul>
+        <p>
+            If the attribute is not present, the resource is fetched without a CORS request (i.e., without sending the <code>Origin</code> HTTP header), preventing its non-tainted usage. If invalid, it is handled as if the enumerated keyword anonymous was used.
+        </p>
+    </dd>
+
+    <dt><code>disabled</code></dt>
+    <dd>
+        <p>
+            For <code>rel="stylesheet"</code> only, the <code>disabled</code> Boolean attribute indicates whether the described stylesheet should be loaded and applied to the document. If <code>disabled</code> is specified in the HTML when it is loaded, the stylesheet will not be loaded during page load. Instead, the stylesheet will be loaded on-demand, if and when the <code>disabled</code> attribute is changed to <code>false</code> or removed.
+            <br>
+            <br>
+            Setting the <code>disabled</code> property in the DOM causes the stylesheet to be removed from the document's <code>Document.styleSheets</code> list.
+        </p>
+    </dd>
+
+    <dt><code>fetchpriority</code></dt>
+    <dd>
+        <p>
+        Provides a hint of the relative priority to use when fetching a resource of a particular type.
+        <br>
+        <br>
+        Values:
+        </p>
+        <ul class="spaced-ul">
+            <li>
+                <p>
+                    <code>high</code>
+                    <br>
+                    <br>
+                    Fetch the resource at a high priority relative to other resources of the same type.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>low</code>
+                    <br>
+                    <br>
+                    Fetch the resource at a low priority relative to other resources of the same type.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>auto</code>
+                    <br>
+                    <br>
+                    Don't set a preference for the fetch priority. This is the default. It is used if no value or an invalid value is set.
+                </p>
+            </li>
+        </ul>
+        <p>
+            Look into <code>HTMLLinkElement.fetchPriority</code> for more information.
+        </p>
+    </dd>
+
+    <dt><code>href</code></dt>
+    <dd>
+        <p>
+            This attribute specifies the URL of the linked resource. A URL can be absolute or relative.
+        </p>
+    </dd>
+
+    <dt><code>hreflang</code></dt>
+    <dd>
+        <p>
+            This attribute indicates the language of the linked resource. It is purely advisory. Allowed values are specified by RFC 5646: Tags for Identifying Languages (also known as BCP 47). Use this attribute only if the <code>href</code> attribute is present.
+        </p>
+    </dd>
+
+    <dt><code>imagesizes</code></dt>
+    <dd>
+        <p>
+            For <code>rel="preload"</code> and <code>as="image"</code> only, the <code>imagesizes</code> attribute has similar syntax and semantics as the <code>sizes</code> attribute that indicates to <code>preload</code> the appropriate resource used by an <code>img</code> element with corresponding values for its <code>srcset</code> and <code>sizes</code> attributes.
+        </p>
+    </dd>
+
+    <dt><code>imagesrcset</code></dt>
+    <dd>
+        <p>
+            For <code>rel="preload"</code> and <code>as="image"</code> only, the <code>imagesrcset</code> attribute has similar syntax and semantics as the <code>srcset</code> attribute that indicates to <code>preload</code> the appropriate resource used by an <code>img</code> element with corresponding values for its <code>srcset</code> and <code>sizes</code> attributes.
+        </p>
+    </dd>
+
+    <dt><code>integrity</code></dt>
+    <dd>
+        <p>
+            Contains inline metadata — a base64-encoded cryptographic hash of the resource (file) you're telling the browser to fetch. The browser can use this to verify that the fetched resource has been delivered without unexpected manipulation. The attribute must only be specified when the <code>rel</code> attribute is specified to <code>stylesheet</code>, <code>preload</code>, or <code>modulepreload</code>. Read up on Subresource Integrity (SRI) for more information.
+        </p>
+    </dd>
+
+    <dt><code>media</code></dt>
+    <dd>
+        <p>
+            This attribute specifies the media that the linked resource applies to. Its value must be a media type / media query. This attribute is mainly useful when linking to external stylesheets — it allows the user agent to pick the best adapted one for the device it runs on.
+            <br>
+            <br>
+            Possible Operators:
+        </p>
+        <ul class="spaced-ul">
+            <li>
+                <p>
+                    <code>and</code>
+                    <br>
+                    <br>
+                    Specifies an AND operator.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>not</code>
+                    <br>
+                    <br>
+                    Specifies a NOT operator.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>,</code>
+                    <br>
+                    <br>
+                    Specifies an OR operator.
+                </p>
+            </li>
+        </ul>
+        <p>
+            Devices:
+        </p>
+        <ul class="spaced-ul">
+            <li>
+                <p>
+                    <code>all</code>
+                    <br>
+                    <br>
+                    Default. Used for all media type devices.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>print</code>
+                    <br>
+                    <br>
+                    Used for Print preview mode/printed pages.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>screen</code>
+                    <br>
+                    <br>
+                    Used for computer screens, tablets, smart-phones etc.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>speech</code>
+                    <br>
+                    <br>
+                    Used for screenreaders that "reads" the page out loud.
+                </p>
+            </li>
+        </ul>
+        <p>
+            Values:
+        </p>
+        <ul class="spaced-ul">
+            <li>
+                <p>
+                    <code>aspect-ratio</code>
+                    <br>
+                    <br>
+                    Specifies the width/height ratio of the targeted display area.
+                    <br>
+                    "min-" and "max-" prefixes can be used.
+                    <br>
+                    <br>
+                    Example:
+                    <br>
+                    <code>media="screen and (max-aspect-ratio:16/9)"</code>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>color</code>
+                    <br>
+                    <br>
+                    Specifies the bits per color of target display.
+                    <br>
+                    "min-" and "max-" prefixes can be used.
+                    <br>
+                    <br>
+                    Example:
+                    <br>
+                    <code>media="screen and (min-color:3)"</code>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>color-index</code>
+                    <br>
+                    <br>
+                    Specifies the number of colors the target display can handle.
+                    <br>
+                    "min-" and "max-" prefixes can be used.
+                    <br>
+                    <br>
+                    Example:
+                    <br>
+                    <code>media="screen and (min-color-index:256)"</code>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>grid</code>
+                    <br>
+                    <br>
+                    Specifies if the output device is grid or bitmap.
+                    <br>
+                    Possible values are "1" for grid, and "0" otherwise.
+                    <br>
+                    <br>
+                    Example:
+                    <br>
+                    <code>media="screen and (grid:1)"</code>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>height</code>
+                    <br>
+                    <br>
+                    Specifies the height of the  targeted display area.
+                    <br>
+                    "min-" and "max-" prefixes can be used.
+                    <br>
+                    <br>
+                    Example:
+                    <br>
+                    <code>media="screen and (max-height:700px)"</code>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>monochrome</code>
+                    <br>
+                    <br>
+                    Specifies the bits per pixel in a monochrome frame buffer.
+                    <br>
+                    "min-" and "max-" prefixes can be used.
+                    <br>
+                    <br>
+                    Example:
+                    <br>
+                    <code>media="screen and (min-monochrome:2)"</code>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>orientation</code>
+                    <br>
+                    <br>
+                    Specifies the orientation of the target display/paper.
+                    <br>
+                    Possible values: "portrait" or "landscape"
+                    <br>
+                    <br>
+                    Example:
+                    <br>
+                    <code>media="all and (orientation: landscape)"</code>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>resolution</code>
+                    <br>
+                    <br>
+                    Specifies the pixel density (dpi or dpcm) of the target display/paper.
+                    <br>
+                    "min-" and "max-" prefixes can be used.
+                    <br>
+                    <br>
+                    Example:
+                    <br>
+                    <code>media="print and (min-resolution:300dpi)"</code>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>scan</code>
+                    <br>
+                    <br>
+                    Specifies scanning method of a tv display.
+                    <br>
+                    Possible values are "progressive" and "interlace".
+                    <br>
+                    <br>
+                    Example:
+                    <br>
+                    <code>media="tv and (scan:interlace)"</code>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>width</code>
+                    <br>
+                    <br>
+                    Specifies the width of the targeted display area.
+                    <br>
+                    "min-" and "max-" prefixes can be used.
+                    <br>
+                    <br>
+                    Example:
+                    <br>
+                    <code>media="screen and (min-width:500px)"</code>
+                </p>
+            </li>
+        </ul>
+    </dd>
+
+    <dt><code>reffererpolicy</code></dt>
+    <dd>
+        <p>
+            A string indicating which referrer to use when fetching the resource.
+            <br>
+            <br>
+            Values:
+        </p>
+        <ul class="spaced-ul">
+            <li>
+                <p>
+                    <code>no-refferer</code>
+                    <br>
+                    <br>
+                    Means that the <code>Referer</code> header will not be sent.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>no-refferer-when-downgrade</code>
+                    <br>
+                    <br>
+                    Means that no <code>Referer</code> header will be sent when navigating to an origin without TLS (HTTPS). This is a user agent's default behavior, if no policy is otherwise specified.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>origin</code>
+                    <br>
+                    <br>
+                    Means that the referrer will be the origin of the page, which is roughly the scheme, the host, and the port.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>origin-when-cross-origin</code>
+                    <br>
+                    <br>
+                    Means that navigating to other origins will be limited to the scheme, the host, and the port, while navigating on the same origin will include the referrer's path.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>unsafe-url</code>
+                    <br>
+                    <br>
+                    Means that the referrer will include the origin and the path (but not the fragment, password, or username). This case is unsafe because it can leak origins and paths from TLS-protected resources to insecure origins.
+                </p>
+            </li>
+        </ul>
+    </dd>
+
+    <dt><code>ref</code></dt>
+    <dd>
+        <p>
+            Required.
+            <br>
+            This attribute names a relationship of the linked document to the current document. The attribute must be a space-separated list of link type values.
+            <br>
+            <br>
+            Values:
+        </p>
+        <ul class="spaced-ul">
+            <li>
+                <p>
+                    <code>alternate</code>
+                    <br>
+                    <br>
+                    Provides a link to an alternate version of the document (i.e. print page, translated or mirror).
+                    <br>
+                    <br>
+                    Example:
+                    <br>
+                    <code>&lt;link rel="alternate" type="application/atom+xml" title="W3Schools News" href="/blog/news/atom"&gt;</code>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>author</code>
+                    <br>
+                    <br>
+                    Provides a link to the author of the document.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>dns-prefetch</code>
+                    <br>
+                    <br>
+                    Specifies that the browser should preemptively perform DNS resolution for the target resource's origin.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>help</code>
+                    <br>
+                    <br>
+                    Provides a link to a help document.
+                    <br>
+                    <br>
+                    Example:
+                    <br>
+                    <code>&lt;link rel="help" href="/help/"&gt;</code>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>icon</code>
+                    <br>
+                    <br>
+                    Imports an icon to represent the document.
+                    <br>
+                    <br>
+                    Example:
+                    <br>
+                    <code>&lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;</code>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>license</code>
+                    <br>
+                    <br>
+                    Provides a link to copyright information for the document.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>next</code>
+                    <br>
+                    <br>
+                    Provides a link to the next document in the series.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>pingback</code>
+                    <br>
+                    <br>
+                    Provides the address of the pingback server that handles pingbacks to the current document.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>preconnect</code>
+                    <br>
+                    <br>
+                    Specifies that the browser should preemptively connect to the target resource's origin.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>author</code>
+                    <br>
+                    <br>
+                    Provides a link to the author of the document.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>prefetch</code>
+                    <br>
+                    <br>
+                    Specifies that the browser should preemptively fetch and cache the target resource as it is likely to be required for a follow-up navigation.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>author</code>
+                    <br>
+                    <br>
+                    Provides a link to the author of the document.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>preload</code>
+                    <br>
+                    <br>
+                    Specifies that the browser agent must preemptively fetch and cache the target resource for current navigation according to the destination given by the <code>"as"</code> attribute (and the priority associated with that destination).
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>prerender</code>
+                    <br>
+                    <br>
+                    Specifies that the browser should pre-render (load) the specified webpage in the background. So, if the user navigates to this page, it speeds up the page load (because the page is already loaded). Warning! This wastes the user's bandwidth! Only use prerender if you are absolutely sure that the webpage is required at some point in the user's journey.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>prev</code>
+                    <br>
+                    <br>
+                    Indicates that the document is a part of a series, and that the previous document in the series is the referenced document.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>search</code>
+                    <br>
+                    <br>
+                    Provides a link to a resource that can be used to search through the current document and its related pages.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>stylesheet</code>
+                    <br>
+                    <br>
+                    Imports a style sheet.
+                </p>
+            </li>
+        </ul>
+    </dd>
+
+    <dt><code>sizes</code></dt>
+    <dd>
+        <p>
+            This attribute defines the sizes of the icons for visual media contained in the resource. It must be present only if the <code>rel</code> contains a value of <code>icon</code> or a non-standard type such as Apple's <code>apple-touch-icon</code>.
+            <br>
+            <br>
+            Values:
+        </p>
+        <ul class="spaced-ul">
+            <li>
+                <p>
+                    <i>HeightxWidth</i>
+                    <br>
+                    <br>
+                    Specifies one or more sizes for the linked icon.
+                    <br>
+                    The height and width values are separated by an "x" or "X".
+                    <br>
+                    <br>
+                    Examples:
+                    <br>
+                    <br>
+                    1 size:
+                    <br>
+                    <code>&lt;link rel="icon" href="favicon.png" sizes="16x16" type="image/png"&gt;</code>
+                    <br>
+                    <br>
+                    2 sizes:
+                    <br>
+                    <code>&lt;link rel="icon" href="favicon.png" sizes="16x16 32x32" type="image/png"&gt;</code>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>any</code>
+                    <br>
+                    <br>
+                    Specifies that the icon is scalable (like an SVG image).
+                    <br>
+                    <br>
+                    Example:
+                    <br>
+                    <code>&lt;link rel="icon" href="icon.svg" sizes="any" type="image/svg+xml"&gt;</code>
+                    <br>
+                    <br>
+                    While the <code>any</code> value is technically permissable on raster images, it's best used with vectors, because you'd be promising infinite scalability for an image that will degrade when resized, leading to a poor user experience.
+                </p>
+            </li>
+        </ul>
+    </dd>
+
+    <dt><code>title</code></dt>
+    <dd>
+        <p>
+            The title attribute has special semantics on the <code>&lt;link&gt;</code> element. When used on a <code>&lt;link rel="stylesheet"&gt;</code> it defines a default or an alternate stylesheet.
+        </p>
+    </dd>
+
+    <dt><code>type</code></dt>
+    <dd>
+        <p>
+            This attribute is used to define the type of the content linked to. The value of the attribute should be a MIME type such as text/html, text/css, and so on. The common use of this attribute is to define the type of stylesheet being referenced (such as text/css), but given that CSS is the only stylesheet language used on the web, not only is it possible to omit the <code>type</code> attribute, but is actually now recommended practice. It is also used on <code>rel="preload"</code> link types, to make sure the browser only downloads file types that it supports.
+            <br>
+            <br>
+            Look at <a href="http://www.iana.org/assignments/media-types/" target="_blank">IANA Media Types</a> for a complete list of standard media types.
+        </p>
+    </dd>
+</dl>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_link.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/semantics.html#the-link-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <style> -->
+
+<h3 id="style">&lt;style&gt;</h3>
+
+<h4>Description:</h4>
+
+<p>
+    The <code>&lt;style&gt;</code> HTML element contains style information for a document, or part of a document. It contains CSS, which is applied to the contents of the document containing the <code>&lt;style&gt;</code> element.
+</p>
+
+<h4 class="spaced-sub-title">Attributes:</h4>
+
+<dl class="spaced-dl">
+    <dt><code>blocking</code></dt>
+    <dd>
+        <p>
+            This attribute explicitly indicates that certain operations should be blocked on the fetching of critical subresources. <code>@import</code>-ed stylesheets are generally considered as critical subresources, whereas <code>background-image</code> and fonts are not. The operations that are to be blocked must be a space-separated list of blocking tokens listed below:
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <code>render</code>
+                    <br>
+                    The rendering of content on the screen is blocked.
+                </p>
+            </li>
+        </ul>
+    </dd>
+
+    <dt><code>media</code></dt>
+    <dd>
+        <p>
+            This attribute defines which media the style should be applied to. Its value is a media query, which defaults to <code>all</code> if the attribute is missing.
+            <br>
+            <br>
+            For more on media queries read <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries" target="_blank">here</a>.
+        </p>
+    </dd>
+
+    <dt><code>nonce</code></dt>
+    <dd>
+        <p>
+            A cryptographic nonce (number used once) used to allow inline styles in a <code>style-src</code> Content-Security-Policy. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
+        </p>
+    </dd>
+
+    <dt><code>title</code></dt>
+    <dd>
+        <p>
+            This attribute specifies alternative style sheet sets.
+        </p>
+    </dd>
+</dl>
+
+<h4 class="spaced-sub-title">Examples:</h4>
+
+<pre><code>N/A</code></pre>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/style" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_style.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/semantics.html#the-style-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- Sectioning Root -->
+
+<h2 id="sectioning-root">Sectioning Root</h2>
+
+<!-- <body> -->
+
+<h3 id="body">&lt;body&gt;</h3>
+
+<h4>Description:</h4>
+
+<p>
+    The <code>&lt;body&gt;</code> HTML element represents the content of an HTML document. There can be only one <code>&lt;body&gt;</code> element in a document.
+    <br>
+    <br>
+    All the content that is visible to the user is placed inside the <code>&lt;body&gt;</code>.
+    <br>
+    <br>
+    Content outside the <code>&lt;body&gt;</code> tag (but inside <code>&lt;html&gt;</code>) is not displayed in the browser.
+</p>
+
+<h4 class="spaced-sub-title">Examples:</h4>
+
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Title of the document&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;h1&gt;This is a heading&lt;/h1&gt;
+  &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/body" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_body.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/sections.html#the-body-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- Content Sectioning -->
+
+<h2 id="content-sectioning">Content Sectioning</h2>
+<p>
+    Content sectioning elements allow you to organize the document content into logical pieces. Use the sectioning elements to create a broad outline for your page content, including header and footer navigation, and heading elements to identify sections of content.
+</p>
+
+<!--  -->
+
+<h3 id="tbc" class="spaced-sub-title">&lt;TBC&gt;</h3>
+
+<h4>Description:</h4>
+
+<p>
+    More elements coming soon.
+</p>
+
+</main>
+
+</body>
+</html>

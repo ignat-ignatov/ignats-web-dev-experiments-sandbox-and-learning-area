@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
+
+#count-label {
+    display: block;
+    text-align: center;
+    font-size: 10em;
+    font-family: 'Sixtyfour', Helvetica, sans-serif;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+#button-container-increase-decrease {
+    text-align: center;
+}
+
+#button-container-reset {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.buttons {
+    font-size: 2em;
+    font-family: 'Sixtyfour', Helvetica, sans-serif;
+    padding: 0.5em 1em;
+    color: white;
+    background-color: rgb(109, 163, 28);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 0.5em;
+}
+
+.buttons:hover {
+    background-color: green;
+}

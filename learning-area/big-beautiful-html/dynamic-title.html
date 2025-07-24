@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dynamic Title Example</title>
+
+    <style>
+
+        body {
+            font-family: monospace;
+            font-size: 16px;
+            line-height: 1.6;
+
+            max-width: 800px;
+
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+
+        pre code {
+            display: block;
+            padding: 20px;
+
+            border: 1px solid #999;
+            background-color: #eee;
+            
+            color: black;
+            text-wrap: wrap;
+        }
+
+    </style>
+
+</head>
+<body>
+   
+<h1>Dynamic Title Example</h1>
+
+<p>
+    This is an example from the <a href="html-elements.html#title" target="_blank">HTML Elements</a> page.
+</p>
+
+<br>
+
+<h2>Type in the new title</h2>
+<p>
+    When you type something in the box and click on the button the page title will update.
+</p>
+
+<br>
+
+<input type="text" id="titleInput" placeholder="Type a new title" aria-label="Enter a new title" required>
+<button id="updateTitleButton" aria-label="Update the page title">Update Title</button>
+
+<br>
+<br>
+<br>
+<hr>
+<br>
+
+<h2>Sample Code</h2>
+<p>
+    Here's a sample of the code used:
+</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Dynamic Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Enter a New Title&lt;/h1&gt;
+    &lt;input type=&quot;text&quot; id=&quot;titleInput&quot; placeholder=&quot;Type a new title&quot; aria-label=&quot;Enter a new title&quot; required&gt;
+    &lt;button id=&quot;updateTitleButton&quot; aria-label=&quot;Update the page title&quot;&gt;Update Title&lt;/button&gt;
+
+    &lt;script&gt;
+        const input = document.getElementById('titleInput');
+        const button = document.getElementById('updateTitleButton');
+
+        // Function to sanitize input
+        function sanitizeInput(input) {
+            const div = document.createElement('div');
+            div.textContent = input; // Escapes special characters
+            return div.textContent;
+        }
+
+        // Function to validate input
+        function isValidTitle(input) {
+            const regex = /^[a-zA-Z0-9\s]+$/; // Only letters, numbers, and spaces
+            return regex.test(input);
+        }
+
+        // Function to update the title
+        function updateTitle() {
+            const newTitle = sanitizeInput(input.value.trim());
+            if (newTitle &amp;&amp; newTitle.length &lt;= 60 &amp;&amp; isValidTitle(newTitle)) {
+                document.title = newTitle;
+                alert(`Title updated to: &quot;${newTitle}&quot;`);
+            } else if (newTitle.length &gt; 60) {
+                alert(&quot;Title is too long. Please keep it under 60 characters.&quot;);
+            } else {
+                alert(&quot;Invalid title. Please use only letters, numbers, and spaces.&quot;);
+            }
+        }
+
+        // Add click event listener to the button
+        button.addEventListener('click', updateTitle);
+
+        // Add keypress event listener to the input field for &quot;Enter&quot; key
+        input.addEventListener('keypress', (event) =&gt; {
+            if (event.key === 'Enter') {
+                updateTitle();
+            }
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<script>
+    const input = document.getElementById('titleInput');
+    const button = document.getElementById('updateTitleButton');
+
+    // Function to sanitize input
+    function sanitizeInput(input) {
+        const div = document.createElement('div');
+        div.textContent = input; // Escapes special characters
+        return div.textContent;
+    }
+
+    // Function to validate input
+    function isValidTitle(input) {
+        const regex = /^[a-zA-Z0-9\s]+$/; // Only letters, numbers, and spaces
+        return regex.test(input);
+    }
+
+    // Function to update the title
+    function updateTitle() {
+        const newTitle = sanitizeInput(input.value.trim());
+        if (newTitle && newTitle.length <= 60 && isValidTitle(newTitle)) {
+            document.title = newTitle;
+            alert(`Title updated to: "${newTitle}"`);
+        } else if (newTitle.length > 60) {
+            alert("Title is too long. Please keep it under 60 characters.");
+        } else {
+            alert("Invalid title. Please use only letters, numbers, and spaces.");
+        }
+    }
+
+    // Add click event listener to the button
+    button.addEventListener('click', updateTitle);
+
+    // Add keypress event listener to the input field for "Enter" key
+    input.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            updateTitle();
+        }
+    });
+</script>
+
+</body>
+</html>
