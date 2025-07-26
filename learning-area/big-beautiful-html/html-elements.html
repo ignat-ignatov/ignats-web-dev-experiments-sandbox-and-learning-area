@@ -561,7 +561,11 @@
         <p>
             The <code>charset</code> attribute specifies the character encoding for the HTML document.
             <br>
+            <br>
             The HTML5 specification encourages web developers to use the UTF-8 character set, which covers almost all of the characters and symbols in the world!
+            <br>
+            <br>
+            <code>&lt;meta&gt;</code> elements which declare a character encoding must be located entirely within the first 1024 bytes of the document.
             <br>
             <br>
             Example:
@@ -1286,13 +1290,22 @@
     <dd>
         <p>
             This attribute is required when <code>rel="preload"</code> has been set on the <code>&lt;link&gt;</code> element, optional when <code>rel="modulepreload"</code> has been set, and otherwise should not be used. It specifies the type of content being loaded by the <code>&lt;link&gt;</code>, which is necessary for request matching, application of correct content security policy, and setting of correct <code>Accept</code> request header.
+            <br>
+            <br>
+            Furthermore, <code>rel="preload"</code> uses this as a signal for request prioritization.
         </p>
     </dd>
 
     <dt><code>blocking</code></dt>
     <dd>
         <p>
-            This attribute explicitly indicates that certain operations should be blocked on the fetching of an external resource. It must only be used when the rel attribute contains expect or stylesheet keywords. The operations that are to be blocked must be a space-separated list of blocking tokens listed below.
+            This attribute explicitly indicates that certain operations should be blocked on the fetching of an external resource. It must only be used when the rel attribute contains expect or stylesheet keywords. 
+            <br>
+            <br>
+            The operations that are to be blocked must be a space-separated list of blocking tokens listed below:
+            <br>
+            <br>
+            - <code>render</code> The rendering of content on the screen is blocked.
         </p>
     </dd>
 
@@ -1712,7 +1725,7 @@
         </ul>
     </dd>
 
-    <dt><code>ref</code></dt>
+    <dt><code>rel</code></dt>
     <dd>
         <p>
             Required.
