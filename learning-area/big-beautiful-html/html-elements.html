@@ -49,7 +49,7 @@
     <li>
         <a href="#content-sectioning">Content Sectioning</a>
         <ul>
-            <li><a href="#tbc">TBC</a></li>
+            <li><a href="#address">address</a></li>
         </ul>
     </li>
 </ul> 
@@ -117,7 +117,7 @@
     <li>
         <a href="#content-sectioning">Content Sectioning</a>
         <ul>
-            <li><a href="#tbc">TBC</a></li>
+            <li><a href="#address">address</a></li>
         </ul>
     </li>
 </ul>
@@ -2113,13 +2113,40 @@
 
 <!--  -->
 
-<h3 id="tbc" class="spaced-sub-title">&lt;TBC&gt;</h3>
+<h3 id="address" class="spaced-sub-title">&lt;address&gt;</h3>
 
 <h4>Description:</h4>
 
 <p>
-    More elements coming soon.
+    The <code>&lt;address&gt;</code> HTML element indicates that the enclosed HTML provides contact information for a person or people, or for an organization.
+    <br>
+    <br>
+    The contact information provided by an <code>&lt;address&gt;</code> element's contents can take whatever form is appropriate for the context, and may include any type of contact information that is needed, such as a physical address, URL, email address, phone number, social media handle, geographic coordinates, and so forth. The <code>&lt;address&gt;</code> element should include the name of the person, people, or organization to which the contact information refers.
+    <br>
+    <br>
+    <code>&lt;address&gt;</code> can be used in a variety of contexts, such as providing a business's contact information in the page footer, or indicating the author of an article by including an <code>&lt;address&gt;</code> element within the <code>&lt;article&gt;</code>.
+    <br>
+    <br>
+    The text in the <code>&lt;address&gt;</code> element usually renders in italic, and browsers will always add a line break before and after the <code>&lt;address&gt;</code> element.
 </p>
+
+<h4 class="spaced-sub-sub-title">Example:</h4>
+
+<pre><code>&lt;address&gt;
+  Contact us at: &lt;a href=&quot;mailto:info@example.com&quot;&gt;info@example.com&lt;/a&gt;&lt;br&gt;
+  123 Main Street, Springfield, USA&lt;br&gt;
+  Phone: +1-555-123-4567
+&lt;/address&gt;</code></pre>
+
+<p>
+    Output of above example:
+</p>
+
+<address>
+    Contact us at: <a href="mailto:info@example.com">info@example.com</a><br>
+    123 Main Street, Springfield, USA<br>
+    Phone: +1-555-123-4567
+</address>
 
 </main>
 
