@@ -596,7 +596,7 @@
     <dt><code>content</code></dt>
     <dd>
         <p>
-            The <code>content</code> attribute gives the value associated with the <code>http-equiv</code> or <code>name</code> attribute.
+            The <code>content</code> attribute contains the value for the <code>http-equiv</code> or <code>name</code> attribute.
             <br>
             <br>
             Examples:
@@ -609,31 +609,28 @@
     <dt><code>name</code></dt>
     <dd>
         <p>
-            The <code>name</code> attribute specifies the name for the metadata.
-            <br>
-            <br>
-            The <code>name</code> attribute specifies a name for the information/value of the <code>content</code> attribute.
+            The <code>name</code> attribute provides metadata in name-value pairs. When a <code>&lt;meta&gt;</code> element has a <code>name</code> attribute, a <code>content</code> attribute defines the corresponding value. The metadata is document-level metadata that applies to the whole page.
             <br>
             <br>
             If the <code>http-equiv</code> attribute is set, the <code>name</code> attribute should not be set in the same tag.
             <br>
             <br>
-            The <code>&lt;meta&gt;</code> tag and its <code>name</code> attribute are used for a variety of purposes, and the values associated with <code>name</code> can come from different sources, including the HTML Specification, the CSS Device Adaptation specification, the <a href="https://wiki.whatwg.org/wiki/MetaExtensions#Meta_Name_Extensions" target="_blank">WHATWG MetaExtensions Wiki</a>, and others.
+            The <code>&lt;meta&gt;</code> tag and its <code>name</code> attribute are used for a variety of purposes, and the names can come from different sources, including the <a href="https://html.spec.whatwg.org" target="_blank">HTML Specification</a>, the <a href="https://www.w3.org/TR/css-viewport-1/" target="_blank">CSS Device Adaptation specification</a>, the <a href="https://wiki.whatwg.org/wiki/MetaExtensions#Meta_Name_Extensions" target="_blank">WHATWG MetaExtensions Wiki</a>, and others.
             <br>
             <br>
-            While values defined in the HTML specification are the safest and most universally supported, many values from other specifications or the WHATWG MetaExtensions wiki are widely adopted and provide useful functionality.
+            While names defined in the HTML specification are the safest and most universally supported, many names from other specifications or the WHATWG MetaExtensions wiki are widely adopted and provide useful functionality.
             <br>
             <br>
             Check compatibility using resources like <a href="https://caniuse.com/" target="_blank">Can I Use</a> or browser documentation.
             <br>
             <br>
-            If a value provides functionality you need (e.g., <code>theme-color</code> for branding), it's worth using even if it's not part of the HTML specification.
+            If a name provides functionality you need (e.g., <code>theme-color</code> for branding), it's worth using even if it's not part of the HTML specification.
             <br>
             <br>
-            For less widely supported values, provide fallbacks or ensure your site functions correctly even if the metadata is ignored.
+            For less widely supported names, provide fallbacks or ensure your site functions correctly even if the metadata is ignored.
             <br>
             <br>
-            <strong><i>Meta names defined in the HTML specification:</i></strong>
+            <strong>Meta names defined in the HTML specification:</strong>
         </p>
 
         <ul class="spaced-ul">
@@ -664,7 +661,7 @@
 
 &lt;meta name=&quot;application-name&quot; content=&quot;Mago del Clima&quot; lang=&quot;es&quot; /&gt;</code></pre>
                 <p>
-                    Other Use Cases:
+                    <strong><i>Other Use Cases:</i></strong>
                     <br>
                     <br>
                     In PWAs, the <code>application-name</code> can complement other metadata (like the manifest file) to define the app's identity.
@@ -738,7 +735,7 @@
     &lt;/style&gt;
 &lt;/head&gt;</code></pre>
                 <p>
-                    <code>content</code> Values:
+                    Possible <code>content</code> values for <code>color-scheme</code>
                 </p>
                 <ul>
                     <li>
@@ -770,7 +767,7 @@
                 </ul>
 
                 <p style="margin-top: 3em;">
-                    Other Values:
+                    Other optional <code>color-scheme</code> values:
                 </p>
 
                 <ul>
@@ -780,6 +777,13 @@
                             <br>
                             <br>
                             Any valid media type or query. If provided, the options for the document's color scheme defined in the content attribute are suggested to the browser when the media query matches. This is mostly useful for the <code>prefers-color-scheme</code> CSS media feature.
+                            <br>
+                            <br>
+                            Example:
+                        </p>
+<pre style="margin-bottom: 2em;"><code>&lt;meta name=&quot;color-scheme&quot; content=&quot;dark&quot; media=&quot;(prefers-color-scheme: dark)&quot;&gt;</code></pre>
+                        <p>
+                            This meta tag declares that the website supports dark mode when the user's system or browser is set to dark mode.
                         </p>
                     </li>
                 </ul>
@@ -1022,7 +1026,7 @@
         </ul>
 
         <p style="margin-top: 3em;">
-            <strong><i>Meta names defined in the CSS Device Adaptation specification:</i></strong>
+            <strong>Meta names defined in the CSS Device Adaptation specification:</strong>
         </p>
 
         <ul class="spaced-ul">
@@ -1050,7 +1054,7 @@
                     The <code>initial-scale=1.0</code> part sets the initial zoom level when the page is first loaded by the browser.
                     <br>
                     <br>
-                    Values:
+                    Possible <code>viewport</code> values:
                 </p>
                 <ul>
                     <li>
@@ -1134,6 +1138,9 @@
         </ul>
         
         <p style="margin-top: 3em;">
+            <strong>Meta names defined in the WHATWG Wiki MetaExtensions wiki:</strong>
+            <br>
+            <br>
             The <a href="https://wiki.whatwg.org/wiki/MetaExtensions" target="_blank">WHATWG Wiki MetaExtensions page</a> contains a large set of non-standard metadata names.
             <br>
             <br>
@@ -1233,7 +1240,7 @@
                 </p>
 <pre><code>&lt;meta http-quiv="content-type" content="text/html; charset=UTF-8"&gt;</code></pre>
                 <p>
-                    It's the same as <code>&lt;meta charset="utf-8"/&gt;</code>, so best to use <code>charset</code>.
+                    It's the same as <code>&lt;meta charset="utf-8"&gt;</code>, so best to use <code>charset</code>.
                     <br>
                     <br>
                     Source: <a href="https://stackoverflow.com/questions/4696499/meta-charset-utf-8-vs-meta-http-equiv-content-type">Stack Overflow</a>
@@ -1325,7 +1332,15 @@
             The operations that are to be blocked must be a space-separated list of blocking tokens listed below:
             <br>
             <br>
-            - <code>render</code> The rendering of content on the screen is blocked.
+            <ul>
+                <li>
+                    <p>
+                        <code>render</code> 
+                        <br>
+                        The rendering of content on the screen is blocked.
+                    </p>
+                </li>
+            </ul>
         </p>
     </dd>
 
@@ -2131,7 +2146,7 @@
     Content sectioning elements allow you to organize the document content into logical pieces. Use the sectioning elements to create a broad outline for your page content, including header and footer navigation, and heading elements to identify sections of content.
 </p>
 
-<!--  -->
+<!-- <address> -->
 
 <h3 id="address" class="spaced-sub-title">&lt;address&gt;</h3>
 
@@ -2168,7 +2183,19 @@
     Phone: +1-555-123-4567
 </address>
 
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/address" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_address.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/sections.html#the-address-element" target="_blank">Standard</a>
+</p>
+
 <hr>
+
+<!-- <article> -->
 
 <h3 id="article">&lt;article&gt;</h3>
 
@@ -2184,7 +2211,19 @@
     Each <code>&lt;article&gt;</code> should be identified, typically by including a heading (<code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code> element) as a child of the <code>&lt;article&gt;</code> element.
 </p>
 
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/article" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_article.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/sections.html#the-article-element" target="_blank">Standard</a>
+</p>
+
 <hr>
+
+<!-- <aside> -->
 
 <h3 id="aside">&lt;aside&gt;</h3>
 
@@ -2194,7 +2233,19 @@
     The <code>&lt;aside&gt;</code> HTML element represents a portion of a document whose content is only indirectly related to the document's main content. Asides are frequently presented as sidebars or call-out boxes.
 </p>
 
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/aside" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_aside.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/sections.html#the-aside-element" target="_blank">Standard</a>
+</p>
+
 <hr>
+
+<!-- <footer> -->
 
 <h3 id="footer">&lt;footer&gt;</h3>
 
@@ -2204,7 +2255,19 @@
     The <code>&lt;footer&gt;</code> HTML element represents a footer for its nearest ancestor sectioning content or sectioning root element. A <code>&lt;footer&gt;</code> typically contains information about the author of the section, copyright data or links to related documents.
 </p>
 
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/footer" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_footer.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/sections.html#the-footer-element" target="_blank">Standard</a>
+</p>
+
 <hr>
+
+<!-- <header> -->
 
 <h3 id="header">&lt;header&gt;</h3>
 
@@ -2214,7 +2277,19 @@
     The <code>&lt;header&gt;</code> HTML element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.
 </p>
 
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/header" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_header.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/sections.html#the-header-element" target="_blank">Standard</a>
+</p>
+
 <hr>
+
+<!-- <h1> to <h6> -->
 
 <h3 id="headings">&lt;h1&gt; - &lt;h6&gt;</h3>
 
@@ -2224,7 +2299,19 @@
     The <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> HTML elements represent six levels of section headings. <code>&lt;h1&gt;</code> is the highest section level and <code>&lt;h6&gt;</code> is the lowest. By default, all heading elements create a block-level box in the layout, starting on a new line and taking up the full width available in their containing block.
 </p>
 
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_hn.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements" target="_blank">Standard</a>
+</p>
+
 <hr>
+
+<!-- <hgroup> -->
 
 <h3 id="hgroup">&lt;hgroup&gt;</h3>
 
@@ -2234,7 +2321,19 @@
     The <code>&lt;hgroup&gt;</code> HTML element represents a heading and related content. It groups a single <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code> element with one or more <code>&lt;p&gt;</code>.
 </p>
 
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/hgroup" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_hgroup.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/sections.html#the-hgroup-element" target="_blank">Standard</a>
+</p>
+
 <hr>
+
+<!-- <main> -->
 
 <h3 id="main">&lt;main&gt;</h3>
 
@@ -2244,7 +2343,19 @@
     The <code>&lt;main&gt;</code> HTML element represents the dominant content of the <code>&lt;body&gt;</code> of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the central functionality of an application.
 </p>
 
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/main" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_main.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-main-element" target="_blank">Standard</a>
+</p>
+
 <hr>
+
+<!-- <nav> -->
 
 <h3 id="nav">&lt;nav&gt;</h3>
 
@@ -2254,7 +2365,19 @@
     The <code>&lt;nav&gt;</code> HTML element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes.
 </p>
 
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/nav" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_nav.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/sections.html#the-nav-element" target="_blank">Standard</a>
+</p>
+
 <hr>
+
+<!-- <section> -->
 
 <h3 id="section">&lt;section&gt;</h3>
 
@@ -2264,7 +2387,19 @@
     The <code>&lt;section&gt;</code> HTML element represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it. Sections should always have a heading, with very few exceptions.
 </p>
 
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/section" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_section.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/sections.html#the-section-element" target="_blank">Standard</a>
+</p>
+
 <hr>
+
+<!-- <search> -->
 
 <h3 id="search">&lt;search&gt;</h3>
 
@@ -2272,6 +2407,16 @@
 
 <p>
     The <code>&lt;search&gt;</code> HTML element is a container representing the parts of the document or application with form controls or other content related to performing a search or filtering operation. The <code>&lt;search&gt;</code> element semantically identifies the purpose of the element's contents as having search or filtering capabilities. The search or filtering functionality can be for the website or application, the current web page or document, or the entire Internet or subsection thereof.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/search" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_search.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-search-element" target="_blank">Standard</a>
 </p>
 
 </main>
