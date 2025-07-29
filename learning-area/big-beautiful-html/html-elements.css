@@ -101,9 +101,20 @@ hr {
     position: fixed;
     right: 0;
     margin-right: 10%;
+    overflow: auto;
+
+    padding-right: 2em;
+
+    scrollbar-width: thin;
 }
 
 /* Making the website responsive to the size of the viewport here. */
+
+@media (width < 1560px) {
+    .floating-menu {
+        margin-right: 5%;
+    }
+}
 
 @media (width < 1360px) {
     main {
@@ -111,8 +122,8 @@ hr {
         padding-right: 100px;
     }
 
-    .floating-menu{
-        margin-right: 5%;
+    .floating-menu {
+        margin-right: 1%;
     }
 }
 
@@ -123,7 +134,7 @@ hr {
         padding-right: 120px;
     }
 
-    .floating-menu{
+    .floating-menu {
         display: none;
     }
 }
@@ -137,7 +148,7 @@ hr {
         border: none;
     }
 
-    .floating-menu{
+    .floating-menu {
         display: none;
     }
 }
