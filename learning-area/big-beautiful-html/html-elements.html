@@ -1320,6 +1320,9 @@
             <br>
             <br>
             Furthermore, <code>rel="preload"</code> uses this as a signal for request prioritization.
+            <br>
+            <br>
+            See more <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link#as" target="_blank">here</a> (link to MDN article section with table reference for <code>as</code> values).
         </p>
     </dd>
 
@@ -1373,6 +1376,17 @@
         </ul>
         <p>
             If the attribute is not present, the resource is fetched without a CORS request (i.e., without sending the <code>Origin</code> HTTP header), preventing its non-tainted usage. If invalid, it is handled as if the enumerated keyword anonymous was used.
+            <br>
+            <br>
+            More on CORS:
+            <br>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/crossorigin" target="_blank">HTML attribute: crossorigin (MDN article)</a>
+            <br>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS" target="_blank">Cross-Origin Resource Sharing (CORS) (MDN article)</a>
+            <br>
+            <a href="https://developer.mozilla.org/en-US/docs/Glossary/CORS" target="_blank">CORS (MDN glossary item)</a>
+            <br>
+            <a href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing" target="_blank">Cross-origin resource sharing (Wikipedia article)</a>
         </p>
     </dd>
 
@@ -1423,7 +1437,7 @@
             </li>
         </ul>
         <p>
-            Look into <code>HTMLLinkElement.fetchPriority</code> for more information.
+            Look into <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/fetchPriority" target="_blank"><code>HTMLLinkElement.fetchPriority</code></a> for more information.
         </p>
     </dd>
 
@@ -1458,7 +1472,10 @@
     <dt><code>integrity</code></dt>
     <dd>
         <p>
-            Contains inline metadata — a base64-encoded cryptographic hash of the resource (file) you're telling the browser to fetch. The browser can use this to verify that the fetched resource has been delivered without unexpected manipulation. The attribute must only be specified when the <code>rel</code> attribute is specified to <code>stylesheet</code>, <code>preload</code>, or <code>modulepreload</code>. Read up on Subresource Integrity (SRI) for more information.
+            Contains inline metadata — a base64-encoded cryptographic hash of the resource (file) you're telling the browser to fetch. The browser can use this to verify that the fetched resource has been delivered without unexpected manipulation. The attribute must only be specified when the <code>rel</code> attribute is specified to <code>stylesheet</code>, <code>preload</code>, or <code>modulepreload</code>. 
+            <br>
+            <br>
+            Read up on <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity" target="_blank">Subresource Integrity (SRI)</a> for more information.
         </p>
     </dd>
 
@@ -1468,240 +1485,12 @@
             This attribute specifies the media that the linked resource applies to. Its value must be a media type / media query. This attribute is mainly useful when linking to external stylesheets — it allows the user agent to pick the best adapted one for the device it runs on.
             <br>
             <br>
-            Possible Operators:
+            More on media queries:
+            <br>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries" target="_blank">CSS media queries (MDN article guide)</a>
+            <br>
+            <a href="https://www.w3schools.com/tags/att_link_media.asp" target="_blank"> HTML &lt;link&gt; media Attribute (W3S article)</a>
         </p>
-        <ul class="spaced-ul">
-            <li>
-                <p>
-                    <code>and</code>
-                    <br>
-                    <br>
-                    Specifies an AND operator.
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>not</code>
-                    <br>
-                    <br>
-                    Specifies a NOT operator.
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>,</code>
-                    <br>
-                    <br>
-                    Specifies an OR operator.
-                </p>
-            </li>
-        </ul>
-        <p>
-            Devices:
-        </p>
-        <ul class="spaced-ul">
-            <li>
-                <p>
-                    <code>all</code>
-                    <br>
-                    <br>
-                    Default. Used for all media type devices.
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>print</code>
-                    <br>
-                    <br>
-                    Used for Print preview mode/printed pages.
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>screen</code>
-                    <br>
-                    <br>
-                    Used for computer screens, tablets, smart-phones etc.
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>speech</code>
-                    <br>
-                    <br>
-                    Used for screenreaders that "reads" the page out loud.
-                </p>
-            </li>
-        </ul>
-        <p>
-            Values:
-        </p>
-        <ul class="spaced-ul">
-            <li>
-                <p>
-                    <code>aspect-ratio</code>
-                    <br>
-                    <br>
-                    Specifies the width/height ratio of the targeted display area.
-                    <br>
-                    "min-" and "max-" prefixes can be used.
-                    <br>
-                    <br>
-                    Example:
-                    <br>
-                    <code>media="screen and (max-aspect-ratio:16/9)"</code>
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>color</code>
-                    <br>
-                    <br>
-                    Specifies the bits per color of target display.
-                    <br>
-                    "min-" and "max-" prefixes can be used.
-                    <br>
-                    <br>
-                    Example:
-                    <br>
-                    <code>media="screen and (min-color:3)"</code>
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>color-index</code>
-                    <br>
-                    <br>
-                    Specifies the number of colors the target display can handle.
-                    <br>
-                    "min-" and "max-" prefixes can be used.
-                    <br>
-                    <br>
-                    Example:
-                    <br>
-                    <code>media="screen and (min-color-index:256)"</code>
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>grid</code>
-                    <br>
-                    <br>
-                    Specifies if the output device is grid or bitmap.
-                    <br>
-                    Possible values are "1" for grid, and "0" otherwise.
-                    <br>
-                    <br>
-                    Example:
-                    <br>
-                    <code>media="screen and (grid:1)"</code>
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>height</code>
-                    <br>
-                    <br>
-                    Specifies the height of the  targeted display area.
-                    <br>
-                    "min-" and "max-" prefixes can be used.
-                    <br>
-                    <br>
-                    Example:
-                    <br>
-                    <code>media="screen and (max-height:700px)"</code>
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>monochrome</code>
-                    <br>
-                    <br>
-                    Specifies the bits per pixel in a monochrome frame buffer.
-                    <br>
-                    "min-" and "max-" prefixes can be used.
-                    <br>
-                    <br>
-                    Example:
-                    <br>
-                    <code>media="screen and (min-monochrome:2)"</code>
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>orientation</code>
-                    <br>
-                    <br>
-                    Specifies the orientation of the target display/paper.
-                    <br>
-                    Possible values: "portrait" or "landscape"
-                    <br>
-                    <br>
-                    Example:
-                    <br>
-                    <code>media="all and (orientation: landscape)"</code>
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>resolution</code>
-                    <br>
-                    <br>
-                    Specifies the pixel density (dpi or dpcm) of the target display/paper.
-                    <br>
-                    "min-" and "max-" prefixes can be used.
-                    <br>
-                    <br>
-                    Example:
-                    <br>
-                    <code>media="print and (min-resolution:300dpi)"</code>
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>scan</code>
-                    <br>
-                    <br>
-                    Specifies scanning method of a tv display.
-                    <br>
-                    Possible values are "progressive" and "interlace".
-                    <br>
-                    <br>
-                    Example:
-                    <br>
-                    <code>media="tv and (scan:interlace)"</code>
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>width</code>
-                    <br>
-                    <br>
-                    Specifies the width of the targeted display area.
-                    <br>
-                    "min-" and "max-" prefixes can be used.
-                    <br>
-                    <br>
-                    Example:
-                    <br>
-                    <code>media="screen and (min-width:500px)"</code>
-                </p>
-            </li>
-        </ul>
     </dd>
 
     <dt><code>reffererpolicy</code></dt>
@@ -1768,177 +1557,12 @@
             This attribute names a relationship of the linked document to the current document. The attribute must be a space-separated list of link type values.
             <br>
             <br>
-            Values:
+            More on <code>rel</code> and its possible values:
+            <br>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel" target="_blank">HTML attribute: rel (MDN article)</a>
+            <br>
+            <a href="https://www.w3schools.com/tags/att_link_rel.asp" target="_blank">HTML &lt;link&gt; rel Attribute</a>
         </p>
-        <ul class="spaced-ul">
-            <li>
-                <p>
-                    <code>alternate</code>
-                    <br>
-                    <br>
-                    Provides a link to an alternate version of the document (i.e. print page, translated or mirror).
-                    <br>
-                    <br>
-                    Example:
-                    <br>
-                    <code>&lt;link rel="alternate" type="application/atom+xml" title="W3Schools News" href="/blog/news/atom"&gt;</code>
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>author</code>
-                    <br>
-                    <br>
-                    Provides a link to the author of the document.
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>dns-prefetch</code>
-                    <br>
-                    <br>
-                    Specifies that the browser should preemptively perform DNS resolution for the target resource's origin.
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>help</code>
-                    <br>
-                    <br>
-                    Provides a link to a help document.
-                    <br>
-                    <br>
-                    Example:
-                    <br>
-                    <code>&lt;link rel="help" href="/help/"&gt;</code>
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>icon</code>
-                    <br>
-                    <br>
-                    Imports an icon to represent the document.
-                    <br>
-                    <br>
-                    Example:
-                    <br>
-                    <code>&lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;</code>
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>license</code>
-                    <br>
-                    <br>
-                    Provides a link to copyright information for the document.
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>next</code>
-                    <br>
-                    <br>
-                    Provides a link to the next document in the series.
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>pingback</code>
-                    <br>
-                    <br>
-                    Provides the address of the pingback server that handles pingbacks to the current document.
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>preconnect</code>
-                    <br>
-                    <br>
-                    Specifies that the browser should preemptively connect to the target resource's origin.
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>author</code>
-                    <br>
-                    <br>
-                    Provides a link to the author of the document.
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>prefetch</code>
-                    <br>
-                    <br>
-                    Specifies that the browser should preemptively fetch and cache the target resource as it is likely to be required for a follow-up navigation.
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>author</code>
-                    <br>
-                    <br>
-                    Provides a link to the author of the document.
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>preload</code>
-                    <br>
-                    <br>
-                    Specifies that the browser agent must preemptively fetch and cache the target resource for current navigation according to the destination given by the <code>"as"</code> attribute (and the priority associated with that destination).
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>prerender</code>
-                    <br>
-                    <br>
-                    Specifies that the browser should pre-render (load) the specified webpage in the background. So, if the user navigates to this page, it speeds up the page load (because the page is already loaded). Warning! This wastes the user's bandwidth! Only use prerender if you are absolutely sure that the webpage is required at some point in the user's journey.
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>prev</code>
-                    <br>
-                    <br>
-                    Indicates that the document is a part of a series, and that the previous document in the series is the referenced document.
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>search</code>
-                    <br>
-                    <br>
-                    Provides a link to a resource that can be used to search through the current document and its related pages.
-                </p>
-            </li>
-
-            <li>
-                <p>
-                    <code>stylesheet</code>
-                    <br>
-                    <br>
-                    Imports a style sheet.
-                </p>
-            </li>
-        </ul>
     </dd>
 
     <dt><code>sizes</code></dt>
@@ -1991,6 +1615,9 @@
                 </p>
             </li>
         </ul>
+        <p>
+            Most icon formats are only able to store one single icon; therefore, most of the time, the <code>sizes</code> attribute contains only one entry. Microsoft's ICO format and Apple's ICNS format can store multiple icon sizes in a single file. ICO has better browser support, so you should use this format if cross-browser support is a concern.
+        </p>
     </dd>
 
     <dt><code>title</code></dt>
