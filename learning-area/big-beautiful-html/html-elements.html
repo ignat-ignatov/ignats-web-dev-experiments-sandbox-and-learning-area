@@ -62,6 +62,20 @@
             <li><a href="#search">search</a></li>
         </ul>
     </li>
+    <li>
+        <a href="#text-content">Text Content</a>
+        <ul>
+            <li><a href="#blockquote">blockquote</a></li>
+            <li><a href="#div">div</a></li>
+            <li><a href="#dl">dl/dt/dd</a></li>
+            <li><a href="#figure">figure</a></li>
+            <li><a href="#hr">hr</a></li>
+            <li><a href="#menu">menu</a></li>
+            <li><a href="#ol">ol/ul/li</a></li>
+            <li><a href="#p">p</a></li>
+            <li><a href="#pre">pre</a></li>
+        </ul>
+    </li>
 </ul> 
 </nav>
 
@@ -138,6 +152,20 @@
             <li><a href="#nav">nav</a></li>
             <li><a href="#section">section</a></li>
             <li><a href="#search">search</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#text-content">Text Content</a>
+        <ul>
+            <li><a href="#blockquote">blockquote</a></li>
+            <li><a href="#div">div</a></li>
+            <li><a href="#dl">dl/dt/dd</a></li>
+            <li><a href="#figure">figure</a></li>
+            <li><a href="#hr">hr</a></li>
+            <li><a href="#menu">menu</a></li>
+            <li><a href="#ol">ol/ul/li</a></li>
+            <li><a href="#p">p</a></li>
+            <li><a href="#pre">pre</a></li>
         </ul>
     </li>
 </ul>
@@ -2058,6 +2086,549 @@
 /
 <a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-search-element" target="_blank">Standard</a>
 </p>
+
+<hr>
+
+<!-- Text content -->
+
+<h2 id="text-content">Text content</h2>
+
+<p>
+    Use HTML text content elements to organize blocks or sections of content placed between the opening <code>&lt;body&gt;</code> and closing <code>&lt;/body&gt;</code> tags. Important for accessibility and SEO, these elements identify the purpose or structure of that content.
+</p>
+
+<!-- <blockquote> -->
+
+<h3 id="blockquote" class="spaced-sub-title">&lt;blockquote&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;blockquote&gt;</code> HTML element indicates that the enclosed text is an extended quotation. Usually, this is rendered visually by indentation. A URL for the source of the quotation may be given using the <code>cite</code> attribute, while a text representation of the source can be given using the <code>&lt;cite&gt;</code> element.
+</p>
+
+<h4 class="spaced-sub-title">Attributes:</h4>
+
+<dl>
+    <dt><code>cite</code></dt>
+    <dd>
+        <p>
+            A URL that designates a source document or message for the information quoted. This attribute is intended to point to information explaining the context or the reference for the quote.
+        </p>
+    </dd>
+</dl>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/blockquote" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_blockquote.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-blockquote-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- div -->
+
+<h3 id="div">&lt;div&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;div&gt;</code> HTML element is the generic container for flow content. It has no effect on the content or layout until styled in some way using CSS (e.g., styling is directly applied to it, or some kind of layout model like Flexbox is applied to its parent element).
+    <br>
+    <br>
+    As a "pure" container, the <code>&lt;div&gt;</code> element does not inherently represent anything. Instead, it's used to group content so it can be easily styled using the <code>class</code> or <code>id</code> attributes, marking a section of a document as being written in a different language (using the <code>lang</code> attribute), and so on.
+    <br>
+    <br>
+    The <code>&lt;div&gt;</code> element should be used only when no other semantic element (such as <code>&lt;article&gt;</code> or <code>&lt;nav&gt;</code>) is appropriate.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/div" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_div.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <dl><dt><dd> -->
+
+<h3 id="dl">&lt;dl/dt/dd&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;dl&gt;</code> HTML element represents a description list. The element encloses a list of groups of terms (specified using the <code>&lt;dt&gt;</code> element) and descriptions (provided by <code>&lt;dd&gt;</code> elements). Common uses for this element are to implement a glossary or to display metadata (a list of key-value pairs).
+    <br>
+    <br>
+    The <code>&lt;dt&gt;</code> HTML element specifies a term in a description or definition list, and as such must be used inside a <code>&lt;dl&gt;</code> element. It is usually followed by a <code>&lt;dd&gt;</code> element; however, multiple <code>&lt;dt&gt;</code> elements in a row indicate several terms that are all defined by the immediate next <code>&lt;dd&gt;</code> element.
+    <br>
+    <br>
+    The <code>&lt;dd&gt;</code> HTML element provides the description, definition, or value for the preceding term (<code>&lt;dt&gt;</code>) in a description list (<code>&lt;dl&gt;</code>).
+</p>
+
+<h4 class="spaced-sub-title">Example:</h4>
+
+<pre><code>&lt;p&gt;Cryptids of Cornwall:&lt;/p&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;Beast of Bodmin&lt;/dt&gt;
+  &lt;dd&gt;A large feline inhabiting Bodmin Moor.&lt;/dd&gt;
+
+  &lt;dt&gt;Morgawr&lt;/dt&gt;
+  &lt;dd&gt;A sea serpent.&lt;/dd&gt;
+
+  &lt;dt&gt;Owlman&lt;/dt&gt;
+  &lt;dd&gt;A giant owl-like creature.&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+
+<p style="margin-top: 2em; margin-bottom: 2em;"><strong>Output of code example:</strong></p>
+
+<p>Cryptids of Cornwall:</p>
+
+<dl>
+  <dt>Beast of Bodmin</dt>
+  <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+  <dt>Morgawr</dt>
+  <dd>A sea serpent.</dd>
+
+  <dt>Owlman</dt>
+  <dd>A giant owl-like creature.</dd>
+</dl>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<strong>&lt;dl&gt;</strong>
+<br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dl" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_dl.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element" target="_blank">Standard</a>
+</p>
+
+<p>
+<strong>&lt;dt&gt;</strong>
+<br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dt" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_dt.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-dt-element" target="_blank">Standard</a>
+</p>
+
+<p>
+<strong>&lt;dd&gt;</strong>
+<br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dd" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_dd.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-dd-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <figure><figcaption> -->
+
+<h3 id="figure">&lt;figure&gt; &<br>&lt;figcaption&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;figure&gt;</code> HTML element represents self-contained content, potentially with an optional caption, which is specified using the <code>&lt;figcaption&gt;</code> element. The figure, its caption, and its contents are referenced as a single unit.
+    <br>
+    <br>
+    The <code>&lt;figcaption&gt;</code> HTML element represents a caption or legend describing the rest of the contents of its parent <code>&lt;figure&gt;</code> element, providing the <code>&lt;figure&gt;</code> an accessible description.
+    <br>
+    <br>
+    Usually a <code>&lt;figure&gt;</code> is an image, illustration, diagram, code snippet, etc., that is referenced in the main flow of a document, but that can be moved to another part of the document or to an appendix without affecting the main flow.
+</p>
+
+<h4 class="spaced-sub-title">Example:</h4>
+
+<pre><code>&lt;figure&gt;
+  &lt;img
+    src=&quot;images/elephant.jpg&quot;
+    alt=&quot;Elephant at sunset&quot;
+    width=&quot;300&quot; /&gt;
+  &lt;figcaption&gt;An elephant at sunset&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+
+<p style="margin-top: 2em; margin-bottom: 2em;"><strong>Output of code example:</strong></p>
+
+<figure>
+  <img
+    src="images/elephant.jpg"
+    alt="Elephant at sunset"
+    width="300" />
+  <figcaption>An elephant at sunset</figcaption>
+</figure>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<strong>&lt;figure&gt;</strong>
+<br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/figure" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_figure.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-figure-element" target="_blank">Standard</a>
+</p>
+
+<p>
+<strong>&lt;figcaption&gt;</strong>
+<br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/figcaption" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_figcaption.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-figcaption-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <hr> -->
+
+<h3 id="hr">&lt;hr&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;hr&gt;</code> HTML element represents a thematic break between paragraph-level elements: for example, a change of scene in a story, or a shift of topic within a section.
+    <br>
+    <br>
+    Historically, this has been presented as a horizontal rule or line. While it may still be displayed as a horizontal rule in visual browsers, this element is now defined in semantic terms, rather than presentational terms, so if you wish to draw a horizontal line, you should do so using appropriate CSS.
+    <br>
+    <br>
+    The horizontal lines separating the different sections in this document are done with the <code>&lt;hr&gt;</code> element.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/hr" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_hr.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-hr-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <menu> -->
+
+<h3 id="menu">&lt;menu&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;menu&gt;</code> HTML element is described in the HTML specification as a semantic alternative to <code>&lt;ul&gt;</code>, but treated by browsers (and exposed through the accessibility tree) as no different than <code>&lt;ul&gt;</code>. It represents an unordered list of items (which are represented by <code>&lt;li&gt;</code> elements).
+    <br>
+    <br>
+    The <code>&lt;menu&gt;</code> and <code>&lt;ul&gt;</code> elements both represent an unordered list of items. The key difference is that <code>&lt;ul&gt;</code> primarily contains items for display, while <code>&lt;menu&gt;</code> represents a toolbar containing commands that the user can perform or activate.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/menu" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_menu.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-menu-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <ol><ul><li> -->
+
+<h3 id="ol">&lt;ol/ul/li&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;ol&gt;</code> and <code>&lt;ul&gt;</code> elements both represent a list of items. 
+    <br>
+    <br>
+    The <code>&lt;ol&gt;</code> and <code>&lt;ul&gt;</code> (or the synonym <code>&lt;menu&gt;</code>) elements may nest as deeply as desired, alternating between <code>&lt;ol&gt;</code>, <code>&lt;ul&gt;</code> (or <code>&lt;menu&gt;</code>) as needed.
+</p>
+
+<h5 class="spaced-sub-title">&lt;ol&gt;</h5>
+
+<p>
+    The <code>&lt;ol&gt;</code> HTML element represents an ordered list of items — typically rendered as a numbered list.
+</p>
+
+<h6>&lt;ol&gt; attributes:</h6>
+
+<dl class="spaced-dl">
+    <dt><code>reversed</code></dt>
+    <dd>
+        <p>
+            This Boolean attribute specifies that the list's items are in reverse order. Items will be numbered from high to low.
+        </p>
+    </dd>
+
+    <dt><code>start</code></dt>
+    <dd>
+        <p>
+            An integer to start counting from for the list items. Always an Arabic numeral (1, 2, 3, etc.), even when the numbering <code>type</code> is letters or Roman numerals. For example, to start numbering elements from the letter "d" or the Roman numeral "iv," use <code>start="4"</code>.
+        </p>
+    </dd>
+
+    <dt><code>type</code></dt>
+    <dd>
+        <p>
+            Sets the numbering type.
+            <br>
+            <br>
+            The specified type is used for the entire list unless a different type attribute is used on an enclosed <code>&lt;li&gt;</code> element.
+            <br>
+            <br>
+            Unless the type of the list number matters (like legal or technical documents where items are referenced by their number/letter), use the CSS <code>list-style-type</code> property instead.
+            <br>
+            <br>
+            Types:
+        </p>
+
+        <ul class="spaced-ul">
+            <li>
+                <p>
+                    <code>a</code>
+                    <br>
+                    For lowercase letters.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>A</code>
+                    <br>
+                    For uppercase letters.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>i</code>
+                    <br>
+                    For lowercase Roman numerals.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>I</code>
+                    <br>
+                    For uppercase Roman numerals.
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>1</code>
+                    <br>
+                    For numbers. (default)
+                </p>
+            </li>
+        </ul>
+    </dd>
+</dl>
+
+<h5 class="spaced-sub-title">&lt;ul&gt;</h5>
+
+<p>
+    The <code>&lt;ul&gt;</code> HTML element represents an unordered list of items, typically rendered as a bulleted list.
+    <br>
+    <br>
+    The <code>&lt;ul&gt;</code> element is for grouping a collection of items that do not have a numerical ordering, and their order in the list is meaningless. Typically, unordered-list items are displayed with a bullet, which can be of several forms, like a dot, a circle, or a square. 
+    <br>
+    <br>
+    The bullet style is not defined in the HTML description of the page, but in its associated CSS, using the <code>list-style-type</code> property.
+</p>
+
+<h5 class="spaced-sub-title">&lt;li&gt;</h5>
+
+<p>
+    The <code>&lt;ol&gt;</code> HTML element is used to represent an item in a list. It must be contained in a parent element: an ordered list (<code>&lt;ol&gt;</code>), an unordered list (<code>&lt;ul&gt;</code>), or a menu (<code>&lt;menu&gt;</code>). In menus and unordered lists, list items are usually displayed using bullet points. In ordered lists, they are usually displayed with an ascending counter on the left, such as a number or letter.
+</p>
+
+<h6>&lt;li&gt; attributes:</h6>
+
+<dl>
+    <dt><code>value</code></dt>
+    <dd>
+        <p>
+            This integer attribute indicates the current ordinal value of the list item as defined by the <code>&lt;ol&gt;</code> element. The only allowed value for this attribute is a number, even if the list is displayed with Roman numerals or letters. List items that follow this one continue numbering from the value set. This attribute has no meaning for unordered lists (<code>&lt;ul&gt;</code>) or for menus (<code>&lt;menu&gt;</code>).
+        </p>
+    </dd>
+</dl>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<strong>ol</strong>
+<br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ol" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_ol.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-ol-element" target="_blank">Standard</a>
+</p>
+
+<p>
+<strong>ul</strong>
+<br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ul" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_ul.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-ul-element" target="_blank">Standard</a>
+</p>
+
+<p>
+<strong>li</strong>
+<br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/li" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_li.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-li-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <p> -->
+
+<h3 id="p">&lt;p&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;p&gt;</code> HTML element represents a paragraph. Paragraphs are usually represented in visual media as blocks of text separated from adjacent blocks by blank lines and/or first-line indentation, but HTML paragraphs can be any structural grouping of related content, such as images or form fields.
+    <br>
+    <br>
+    Paragraphs are block-level elements, and notably will automatically close if another block-level element is parsed before the closing <code>&lt;/p&gt;</code> tag.
+    <br>
+    <br>
+    Breaking up content into paragraphs helps make a page more accessible. Screen-readers and other assistive technology provide shortcuts to let their users skip to the next or previous paragraph, letting them skim content like how white space lets visual users skip around.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/p" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_p.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-p-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <pre> -->
+
+<h3 id="pre">&lt;pre&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;pre&gt;</code> HTML element represents preformatted text which is to be presented exactly as written in the HTML file, preserving both spaces and line breaks. The text is typically rendered using a non-proportional, or monospaced font.
+    <br>
+    <br>
+    Whitespace inside this element is displayed as written, with one exception. If one or more leading newline characters are included immediately following the opening <code>&lt;pre&gt;</code> tag, the first newline character is stripped.
+    <br>
+    <br>
+    <code>&lt;pre&gt;</code> elements' text content is parsed as HTML, so if you want to ensure that your text content stays as plain text, some syntax characters, such as &lt;, may need to be escaped using their respective character references (entities) as the browser might mix them with tags. 
+    <br>
+    <br>
+    More on that:
+    <br>
+    <a href="https://www.w3schools.com/html/html_entities.asp" target="_blank">HTML Entities (W3s article)</a>
+    <br>
+    <a href="https://developer.mozilla.org/en-US/docs/Glossary/Character_reference" target="_blank">Character reference (MDN glossary article)</a>
+    <br>
+    <a href="https://developer.mozilla.org/en-US/docs/Glossary/Entity" target="_blank">Entity (MDN glossary article)</a>
+    <br>
+    <a href="https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references" target="_blank">List of XML and HTML character entity references
+ (Wikipedia article)</a>
+    <br>
+    <br>
+    <code>&lt;pre&gt;</code> elements commonly contain <code>&lt;code&gt;</code>, <code>&lt;samp&gt;</code>, and <code>&lt;kbd&gt;</code> elements, to represent computer code, computer output, and user input, respectively.
+    <br>
+    <br>
+    The code examples in this article are done with a <code>&lt;code&gt;</code> tag nested inside a <code>&lt;pre&gt;</code>, and a little bit of CSS to create a gray box.
+    <br>
+    <br>
+    By default, <code>&lt;pre&gt;</code> is a block-level element, i.e., its default display value is block.
+</p>
+
+<h5 class="spaced-sub-title">A note on accessibility</h5>
+
+<p>
+    It is important to provide an alternate description for any images or diagrams created using preformatted text. The alternate description should clearly and concisely describe the image or diagram's content.
+    <br>
+    <br>
+    People experiencing low vision conditions and browsing with the aid of assistive technology such as a screen reader may not understand what the preformatted text characters are representing when they are read out in sequence.
+    <br>
+    <br>
+    The <code>aria-label</code> attribute allows you to provide a concise, accessible descriptions. This description will be read by screen readers.
+    <br>
+    <br>
+    More on that:
+    <br>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label" target="_blank">ARIA: aria-label attribute (MDN article)</a>
+</p>
+
+<h4 class="spaced-sub-title">Example:</h4>
+
+<pre><code>&lt;pre role=&quot;img&quot; aria-label=&quot;A cow saying, 'I'm an expert in my field'. The cow is illustrated using preformatted text characters.&quot;&gt;
+      ___________________________
+    &lt; I'm an expert in my field. &gt;
+      ---------------------------
+          \   ^__^
+           \  (oo)\_______
+              (__)\       )\/\
+                  ||----w |
+                  ||     ||
+&lt;/pre&gt;</code></pre>
+
+<p style="margin-top: 2em; margin-bottom: 1em;"><strong>Output of example:</strong></p>
+
+
+<pre role="img" aria-label="A cow saying, 'I'm an expert in my field'. The cow is illustrated using preformatted text characters.">
+      ___________________________
+    &lt; I'm an expert in my field. &gt;
+      ---------------------------
+          \   ^__^
+           \  (oo)\_______
+              (__)\       )\/\
+                  ||----w |
+                  ||     ||
+</pre>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/pre" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_pre.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-pre-element" target="_blank">Standard</a>
+</p>
+
+<hr>
 
 </main>
 
