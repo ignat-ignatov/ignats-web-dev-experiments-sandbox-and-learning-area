@@ -856,7 +856,7 @@
 <pre><code>&lt;meta name="keywords" content="HTML, HTML tags, tag reference"&gt;</code></pre>
             </li>
 
-            <li>
+            <li id="meta-referrer-attr">
                 <p>
                     <code>referrer</code>
                     <br>
@@ -2645,16 +2645,222 @@
 <h4 class="spaced-sub-title">Description:</h4>
 
 <p>
+    The <code>&lt;a&gt;</code> HTML element (or anchor element), with its href attribute, creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.
+    <br>
+    <br>
+    Content within each <code>&lt;a&gt;</code> should indicate the link's destination. If the href attribute is present, pressing the enter key while focused on the <code>&lt;a&gt;</code> element will activate it.
+</p>
+
+<h4 class="spaced-sub-title">Attributes:</h4>
+
+<dl class="spaced-dl">
+    <dt><code>download</code></dt>
+    <dd>
+        <p>
+            Causes the browser to treat the linked URL as a download. Can be used with or without a <code>filename</code> value:
+        </p>
+        <ul class="spaced-ul">
+            <li>
+                <p>
+                    Without a value, the browser will suggest a filename/extension, generated from various sources:
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            The <code>Content-Disposition</code> HTTP header.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The final segment in the URL path.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The media type (from the <code>Content-Type</code> header, the start of a <code>data:</code> URL, or <code>Blob.type</code> for a <code>blob:</code> URL).
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>
+                    <code>filename</code>
+                    <br>
+                    Defining a value suggests it as the filename. <code>/</code> and <code>\</code> characters are converted to underscores (<code>_</code>). Filesystems may forbid other characters in filenames, so browsers will adjust the suggested name if necessary.
+                </p>
+            </li>
+        </ul>
+    </dd>
+
+    <dt><code>href</code></dt>
+    <dd>
+        <p>
+            The URL that the hyperlink points to. Links are not restricted to HTTP-based URLs — they can use any URL scheme supported by browsers:
+        </p>
+        <ul class="spaced-ul">
+            <li>
+                <p>
+                    Telephone numbers with <code>tel:</code> URLs.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Email addresses with <code>mailto:</code> URLs.
+                </p>
+            </li>
+            <li>
+                <p>
+                    SMS text messages with <code>sms:</code> URLs.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Executable code with <code>javascript:</code> URLs.
+                </p>
+            </li>
+            <li>
+                <p>
+                    While web browsers may not support other URL schemes, websites can with <code>registerProtocolHandler()</code>.
+                </p>
+            </li>
+        </ul>
+        <p>
+            Moreover other URL features can locate specific parts of the resource, including:
+        </p>
+        <ul>
+            <li>
+                <p>
+                    Sections of a page with document fragments.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Specific text portions with text fragments.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Pieces of media files with media fragments.
+                </p>
+            </li>
+        </ul>
+    </dd>
+
+    <dt><code>hreflang</code></dt>
+    <dd>
+        <p>
+            Hints at the human language of the linked URL. No built-in functionality. Allowed values are the same as the global <code>lang</code> attribute.
+        </p>
+    </dd>
+
+    <dt><code>ping</code></dt>
+    <dd>
+        <p>
+            A space-separated list of URLs. When the link is followed, the browser will send <code>POST</code> requests with the body <code>PING</code> to the URLs. Typically for tracking.
+        </p>
+    </dd>
+
+    <dt><code>referrerpolicy</code></dt>
+    <dd>
+        <p>
+            Defines how much of the referrer to send when following the link.
+            <br>
+            <br>
+            Similiar to <a href="#meta-referrer-attr"><code>meta</code>'s referrer attribute</a> (link to section in this document). Takes in same values.
+        </p>
+    </dd>
+
+    <dt><code>target</code></dt>
+    <dd>
+    <p>
+        Where to display the linked URL, as the name for a browsing context (a tab, window, or <code>&lt;iframe&gt;</code>). The following keywords have special meanings for where to load the URL:
+    </p>
+    <ul class="spaced-ul">
+        <li><code>_self</code> (default): Show the result in the current browsing context.</li>
+        <li><code>_blank</code>: Usually a new tab, but users can configure browsers to open a new window instead.<br><br>Setting <code>target="_blank"</code> on <code>&lt;a&gt;</code> elements implicitly provides the same <code>rel</code> behavior as setting <code>rel="noopener"</code> which does not set <code>window.opener</code>.</li>
+        <li><code>_parent</code>: Show the result in the parent browsing context of the current one, if the current page is inside a frame. If there is no parent, acts the same as <code>_self</code>.</li>
+        <li><code>_top</code>: Show the result in the topmost browsing context (the browsing context that is an ancestor of the current one and has no parent). If there is no parent, acts the same as <code>_self</code>.</li>
+        <li><code>_unfencedTop</code>: Allows embedded fenced frames to navigate the top-level frame (i.e., traversing beyond the root of the fenced frame, unlike other reserved destinations). Note that the navigation will still succeed if this is used outside of a fenced frame context, but it will not act like a reserved keyword.</li>
+    </ul>
+    </dd>
+
+    <dt><code>type</code></dt>
+    <dd>
+        <p>
+            Hints at the linked URL's format with a MIME type. No built-in functionality.
+        </p>
+    </dd>
+</dl>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_a.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<h3 id="abbr">&lt;abbr&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;abbr&gt;</code> HTML element represents an abbreviation or acronym.
+    <br>
+    <br>
+    When including an abbreviation or acronym, it best to provide a full expansion of the term in plain text on first use, along with the <code>&lt;abbr&gt;</code> to mark up the abbreviation. This informs the user what the abbreviation or acronym means.
+</p>
+
+<h5>On styling</h5>
+
+<p>
+    The purpose of this element is purely for the convenience of the author and all browsers display it inline (display: inline) by default, though its default styling varies from one browser to another.
+    <br>
+    <br>
+    Some browsers add a dotted underline to the content of the element. Others add a dotted underline while converting the contents to small caps. Others may not style it differently than a <code>&lt;span&gt;</code> element. 
+    <br>
+    <br>
+    To control this styling, use <code>text-decoration</code> and <code>font-variant</code>.
+</p>
+
+<h4 class="spaced-sub-title">Attributes:</h4>
+
+<p>
+    The <code>title</code> global attribute has a specific semantic meaning when used with the <code>&lt;abbr&gt</code> element; it must contain a full human-readable description or expansion of the abbreviation. This text is often presented by browsers as a tooltip when the mouse cursor is hovered over the element.
 </p>
 
 <h4 class="spaced-sub-title">Links:</h4>
 
 <p>
-<a href="" target="_blank">MDN</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/abbr" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_abbr.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-abbr-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<h3 id="b">&lt;b&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;b&gt;</code> HTML element is used to draw the reader's attention to the element's contents, which are not otherwise granted special importance. This was formerly known as the Boldface element, and most browsers still draw the text in boldface. However, you should not use <code>&lt;b&gt;</code> for styling text or granting importance. If you wish to create boldface text, you should use the CSS <code>font-weight</code> property. If you wish to indicate an element is of special importance, you should use the <code>&lt;strong&gt;</code> element.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/b" target="_blank">MDN</a>
 /
 <a href="" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-b-element" target="_blank">Standard</a>
 </p>
 
 <hr>
