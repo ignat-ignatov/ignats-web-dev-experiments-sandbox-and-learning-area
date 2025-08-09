@@ -11,19 +11,23 @@
     <link rel="stylesheet" href="html-elements.css">
 
     <!-- Links to highlight.js that work for local dev environment: -->
-    <!-- <link rel="stylesheet" href="/libraries/highlightjs/styles/default.min.css">
+    <!--
+    <link rel="stylesheet" href="/libraries/highlightjs/styles/default.min.css">
     <script src="/libraries/highlightjs/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script> -->
+    <script>hljs.highlightAll();</script>
+    -->
 
     <!-- Links to highlight.js that correctly point to resources for GitHub Pages deployment from repo's root (currently not working, trying to figure out why): -->
-    <!-- <link rel="stylesheet" href="../../libraries/highlightjs/styles/default.min.css">
-    <script src="../../libraries/highlightjs/highlight.min.js"></script> -->
+    <!--
+    <link rel="stylesheet" href="../../libraries/highlightjs/styles/default.min.css">
+    <script src="../../libraries/highlightjs/highlight.min.js"></script>
+    -->
 
     <!-- Links to highlight.js that work for local dev environment and for GitHub pages using cdnjs: -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-    
+
 </head>
 
 <!-- Body begins here. -->
@@ -108,7 +112,7 @@
             <li><a href="#kbd">kbd</a></li>
             <li><a href="#mark">mark</a></li>
             <li><a href="#q">q</a></li>
-            <li><a href="#ruby">ruby</a></li>
+            <li><a href="#ruby">ruby/rt/rp</a></li>
             <li><a href="#s">s</a></li>
             <li><a href="#samp">samp</a></li>
             <li><a href="#small">small</a></li>
@@ -125,9 +129,9 @@
     <li>
         <a href="#image-and-multimedia">Image and multimedia</a>
         <ul>
-            <li><a href="#area">area/map</a></li>
             <li><a href="#audio">audio</a></li>
             <li><a href="#img">img</a></li>
+            <li><a href="#map">map/area</a></li>
             <li><a href="#track">track</a></li>
             <li><a href="#video">video</a></li>
         </ul>
@@ -180,15 +184,38 @@
         </ul>
     </li>
     <li>
-        <a href="#table-content">Table content</a>
+        <a href="#tables">Tables</a>
         <ul>
             <li><a href="#table">table</a></li>
+            <li><a href="#caption">caption</a></li>
+            <li><a href="#thead">thead</a></li>
+            <li><a href="#colgroup">colgroup</a></li>
+            <li><a href="#col">col</a></li>
+            <li><a href="#th">th</a></li>
+            <li><a href="#tbody">tbody</a></li>
+            <li><a href="#tr">tr</a></li>
+            <li><a href="#td">td</a></li>
+            <li><a href="#tfoot">tfoot</a></li>
         </ul>
     </li>
     <li>
         <a href="#forms">Forms</a>
         <ul>
             <li><a href="#form">form</a></li>
+            <li><a href="#button">button</a></li>
+            <li><a href="#datalist">datalist</a></li>
+            <li><a href="#fieldset">fieldset</a></li>
+            <li><a href="#input">input</a></li>
+            <li><a href="#label">label</a></li>
+            <li><a href="#legend">legend</a></li>
+            <li><a href="#meter">meter</a></li>
+            <li><a href="#optgroup">optgroup</a></li>
+            <li><a href="#option">option</a></li>
+            <li><a href="#output">output</a></li>
+            <li><a href="#progress">progress</a></li>
+            <li><a href="#select">select</a></li>
+            <li><a href="#selectedcontent">selectcontent</a></li>
+            <li><a href="#textarea">textarea</a></li>
         </ul>
     </li>
 </ul> 
@@ -301,7 +328,7 @@
             <li><a href="#kbd">kbd</a></li>
             <li><a href="#mark">mark</a></li>
             <li><a href="#q">q</a></li>
-            <li><a href="#ruby">ruby</a></li>
+            <li><a href="#ruby">ruby/rt/rp</a></li>
             <li><a href="#s">s</a></li>
             <li><a href="#samp">samp</a></li>
             <li><a href="#small">small</a></li>
@@ -318,9 +345,9 @@
     <li>
         <a href="#image-and-multimedia">Image and multimedia</a>
         <ul>
-            <li><a href="#area">area/map</a></li>
             <li><a href="#audio">audio</a></li>
             <li><a href="#img">img</a></li>
+            <li><a href="#map">map/area</a></li>
             <li><a href="#track">track</a></li>
             <li><a href="#video">video</a></li>
         </ul>
@@ -373,15 +400,38 @@
         </ul>
     </li>
     <li>
-        <a href="#table-content">Table content</a>
+        <a href="#tables">Tables</a>
         <ul>
             <li><a href="#table">table</a></li>
+            <li><a href="#caption">caption</a></li>
+            <li><a href="#thead">thead</a></li>
+            <li><a href="#colgroup">colgroup</a></li>
+            <li><a href="#col">col</a></li>
+            <li><a href="#th">th</a></li>
+            <li><a href="#tbody">tbody</a></li>
+            <li><a href="#tr">tr</a></li>
+            <li><a href="#td">td</a></li>
+            <li><a href="#tfoot">tfoot</a></li>
         </ul>
     </li>
     <li>
         <a href="#forms">Forms</a>
         <ul>
             <li><a href="#form">form</a></li>
+            <li><a href="#button">button</a></li>
+            <li><a href="#datalist">datalist</a></li>
+            <li><a href="#fieldset">fieldset</a></li>
+            <li><a href="#input">input</a></li>
+            <li><a href="#label">label</a></li>
+            <li><a href="#legend">legend</a></li>
+            <li><a href="#meter">meter</a></li>
+            <li><a href="#optgroup">optgroup</a></li>
+            <li><a href="#option">option</a></li>
+            <li><a href="#output">output</a></li>
+            <li><a href="#progress">progress</a></li>
+            <li><a href="#select">select</a></li>
+            <li><a href="#selectedcontent">selectcontent</a></li>
+            <li><a href="#textarea">textarea</a></li>
         </ul>
     </li>
 </ul>
@@ -2374,7 +2424,7 @@
 
 <hr>
 
-<!-- <dl><dt><dd> -->
+<!-- <dl> <dt> <dd> -->
 
 <h3 id="dl">&lt;dl/dt/dd&gt;</h3>
 
@@ -3169,9 +3219,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/cite" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_cite.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-cite-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3191,9 +3241,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/code" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_code.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-code-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3213,9 +3263,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/data" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_data.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-data-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3235,9 +3285,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dfn" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_dfn.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-dfn-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3257,9 +3307,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/em" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_em.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-em-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3279,9 +3329,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/i" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_i.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-i-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3301,9 +3351,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/kbd" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_kbd.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-kbd-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3323,9 +3373,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/mark" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_mark.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-mark-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3343,11 +3393,11 @@
 <h4 class="spaced-sub-title">Links:</h4>
 
 <p>
-<a href="" target="_blank">MDN</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/q" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_q.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-q-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3365,11 +3415,30 @@
 <h4 class="spaced-sub-title">Links:</h4>
 
 <p>
-<a href="" target="_blank">MDN</a>
+<strong>ruby</strong><br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ruby" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_ruby.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-ruby-element" target="_blank">Standard</a>
+</p>
+
+<p>
+<strong>rt</strong><br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/rt" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_rt.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-rt-element" target="_blank">Standard</a>
+</p>
+
+<p>
+<strong>rp</strong><br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/rp" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_rp.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-rp-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3389,9 +3458,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/s" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_s.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-s-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3411,9 +3480,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/samp" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_samp.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-samp-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3433,9 +3502,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/small" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_small.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-small-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3455,9 +3524,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/span" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_span.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-span-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3477,9 +3546,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/strong" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_strong.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-strong-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3499,9 +3568,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/sub" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_sub.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-sub-and-sup-elements" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3521,9 +3590,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/sup" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_sup.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-sub-and-sup-elements" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3543,9 +3612,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/time" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_time.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-time-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3565,9 +3634,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/u" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_u.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-u-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3587,9 +3656,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/var" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_var.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-var-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3609,9 +3678,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/wbr" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_wbr.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-wbr-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3624,31 +3693,9 @@
     HTML supports various multimedia resources such as images, audio, and video.
 </p>
 
-<!-- <area> <map> -->
-
-<h3 id="area" class="spaced-sub-title">&lt;area/map&gt;</h3>
-
-<h4 class="spaced-sub-title">Description:</h4>
-
-<p>
-    Defines an area inside an image map that has predefined clickable areas. An image map allows geometric areas on an image to be associated with hyperlink.
-</p>
-
-<h4 class="spaced-sub-title">Links:</h4>
-
-<p>
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/area" target="_blank">MDN</a>
-/
-<a href="" target="_blank">W3S</a>
-/
-<a href="" target="_blank">Standard</a>
-</p>
-
-<hr>
-
 <!-- <audio> -->
 
-<h3 id="audio">&lt;audio&gt;</h3>
+<h3 id="audio" class="spaced-sub-title">&lt;audio&gt;</h3>
 
 <h4 class="spaced-sub-title">Description:</h4>
 
@@ -3690,6 +3737,40 @@
 
 <hr>
 
+<!-- <map> <area> -->
+
+<h3 id="map">&lt;map/area&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    Defines an area inside an image map that has predefined clickable areas. An image map allows geometric areas on an image to be associated with hyperlink.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<strong>map</strong>
+<br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/map" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_map.asp" target="_blank">W3S</a>
+/
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/map#specifications" target="_blank">Standard</a>
+</p>
+
+<p>
+<strong>area</strong>
+<br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/area" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_area.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/image-maps.html#the-area-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
 <!-- <track> -->
 
 <h3 id="track">&lt;track&gt;</h3>
@@ -3705,9 +3786,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/track" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_track.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/media.html#the-track-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3727,9 +3808,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_video.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/media.html#the-video-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3757,9 +3838,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/embed" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_embed.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3779,9 +3860,7 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/fencedframe" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
-/
-<a href="" target="_blank">Standard</a>
+<a href="https://wicg.github.io/fenced-frame/#the-fencedframe-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3801,9 +3880,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_iframe.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3823,9 +3902,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/object" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_object.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3845,9 +3924,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/picture" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_picture.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3867,9 +3946,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/source" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_source.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-source-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3897,9 +3976,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/svg" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_svg.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://svgwg.org/svg2-draft/struct.html#NewDocument" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3919,9 +3998,7 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/MathML/Reference/Element/math" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
-/
-<a href="" target="_blank">Standard</a>
+<a href="https://w3c.github.io/mathml-core/#the-top-level-math-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3949,9 +4026,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/canvas" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_canvas.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/canvas.html#the-canvas-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3971,9 +4048,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/noscript" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_noscript.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/scripting.html#the-noscript-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -3993,9 +4070,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_script.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/scripting.html#the-script-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -4023,9 +4100,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/del" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_del.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/edits.html#the-del-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -4045,9 +4122,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ins" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_ins.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/edits.html#the-ins-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -4075,9 +4152,9 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_dialog.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -4095,11 +4172,23 @@
 <h4 class="spaced-sub-title">Links:</h4>
 
 <p>
-<a href="" target="_blank">MDN</a>
+<strong>summary</strong>
+<br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/summary#specifications" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_summary.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-summary-element" target="_blank">Standard</a>
+</p>
+
+<p>
+<strong>details</strong>
+<br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_details.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -4127,9 +4216,7 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/slot" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
-/
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/scripting.html#the-slot-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -4149,16 +4236,14 @@
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/template" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
-/
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/scripting.html#the-template-element" target="_blank">Standard</a>
 </p>
 
 <hr>
 
 <!-- Table content -->
 
-<h2 id="table-content">Table content</h2>
+<h2 id="tables">Tables</h2>
 
 <p>
     The elements here are used to create and handle tabular data.
@@ -4171,17 +4256,215 @@
 <h4 class="spaced-sub-title">Description:</h4>
 
 <p>
-    More on tables coming soon!
+    The <code>&lt;table&gt;</code> HTML element represents tabular data—that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data.
 </p>
 
 <h4 class="spaced-sub-title">Links:</h4>
 
 <p>
-<a href="" target="_blank">MDN</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/table" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_table.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/tables.html#the-table-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <caption> -->
+
+<h3 id="caption">&lt;caption&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;caption&gt;</code> HTML element specifies the caption (or title) of a table, providing the table an accessible description.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/caption" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_caption.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/tables.html#the-caption-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <thead> -->
+
+<h3 id="thead">&lt;thead&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;thead&gt;</code> HTML element encapsulates a set of table rows (<code>&lt;tr</code> elements), indicating that they comprise the head of a table with information about the table's columns. This is usually in the form of column headers (<code>&lt;th&gt;</code> elements).
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/thead" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_thead.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/tables.html#the-thead-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <colgroup> -->
+
+<h3 id="colgroup">&lt;colgroup&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;colgroup&gt;</code> HTML element defines a group of columns within a table.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/colgroup" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_colgroup.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/tables.html#the-colgroup-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <col> -->
+
+<h3 id="col">&lt;col&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;col&gt;</code> HTML element defines one or more columns in a column group represented by its parent <code>&lt;colgroup&gt;</code> element. The <code>&lt;col&gt;</code> element is only valid as a child of a <code>&lt;colgroup&gt;</code> element that has no span attribute defined.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/col" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_col.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/tables.html#the-col-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <th> -->
+
+<h3 id="th">&lt;th&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;th&gt;</code> HTML element defines a cell as the header of a group of table cells and may be used as a child of the <code>&lt;tr&gt;</code> element. The exact nature of this group is defined by the <code>scope</code> and <code>headers</code> attributes.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/th" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_th.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/tables.html#the-th-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <tbody> -->
+
+<h3 id="tbody">&lt;tbody&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;tbody&gt;</code> HTML element encapsulates a set of table rows (<code>&lt;tr&gt;</code> elements), indicating that they comprise the body of a table's (main) data.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/tbody" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_th.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/tables.html#the-tbody-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <tr> -->
+
+<h3 id="tr">&lt;tr&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;tr&gt;</code> HTML element defines a row of cells in a table. The row's cells can then be established using a mix of <code>&lt;td&gt;</code> (data cell) and <code>&lt;th&gt;</code> (header cell) elements.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/tr" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_tr.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/tables.html#the-tr-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <td> -->
+
+<h3 id="td">&lt;td&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;td&gt;</code> HTML element defines a cell of a table that contains data and may be used as a child of the <code>&lt;tr&gt;</code> element.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/td" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_td.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/tables.html#the-td-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <tfoot> -->
+
+<h3 id="tfoot">&lt;tfoot&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;tfoot&gt;</code> HTML element encapsulates a set of table rows (<code>&lt;tr&gt;</code> elements), indicating that they comprise the foot of a table with information about the table's columns. This is usually a summary of the columns, e.g., a sum of the given numbers in a column.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/tfoot" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_tfoot.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/tables.html#the-tfoot-element" target="_blank">Standard</a>
 </p>
 
 <hr>
@@ -4201,17 +4484,332 @@
 <h4 class="spaced-sub-title">Description:</h4>
 
 <p>
-    More on forms coming soon!
+    The <code>&lt;form&gt;</code> HTML element represents a document section containing interactive controls for submitting information.
 </p>
 
 <h4 class="spaced-sub-title">Links:</h4>
 
 <p>
-<a href="" target="_blank">MDN</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/form" target="_blank">MDN</a>
 /
-<a href="" target="_blank">W3S</a>
+<a href="https://www.w3schools.com/tags/tag_form.asp" target="_blank">W3S</a>
 /
-<a href="" target="_blank">Standard</a>
+<a href="https://html.spec.whatwg.org/multipage/forms.html#the-form-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <button> -->
+
+<h3 id="button">&lt;button&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;button&gt;</code> HTML element is an interactive element activated by a user with a mouse, keyboard, finger, voice command, or other assistive technology. Once activated, it then performs an action, such as submitting a form or opening a dialog.
+    <br>
+    <br>
+    By default, HTML buttons are presented in a style resembling the platform the user agent runs on, but you can change buttons' appearance with CSS.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_button.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <datalist> -->
+
+<h3 id="datalist">&lt;datalist&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;datalist&gt;</code> HTML element contains a set of <code>&lt;option&gt;</code> elements that represent the permissible or recommended options available to choose from within other controls.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/datalist" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_datalist.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <fieldset> -->
+
+<h3 id="fieldset">&lt;fieldset&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;fieldset&gt;</code> HTML element is used to group several controls as well as labels (<code>&lt;label&gt;</code>) within a web form.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/fieldset" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_fieldset.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-fieldset-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <input> -->
+
+<h3 id="input">&lt;input&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;input&gt;</code> HTML element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and user agent. The <code>&lt;input&gt;</code> element is one of the most powerful and complex in all of HTML due to the sheer number of combinations of input types and attributes.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_input.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/input.html#the-input-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <label> -->
+
+<h3 id="label">&lt;label&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;label&gt;</code> HTML element represents a caption for an item in a user interface.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/label" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_label.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/forms.html#the-label-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <legend> -->
+
+<h3 id="legend">&lt;legend&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;legend&gt;</code> HTML element represents a caption for the content of its parent <code>&lt;fieldset&gt;</code>.
+    <br>
+    <br>
+    In customizable <code>&lt;select&gt;</code> elements, the <code>&lt;legend&gt;</code> element is allowed as a child of <code>&lt;optgroup&gt;</code>, to provide a label that is easy to target and style. This replaces any text set in the <code>&lt;optgroup&gt;</code> element's label attribute, and it has the same semantics.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/legend" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_legend.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-legend-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <meter> -->
+
+<h3 id="meter">&lt;meter&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;meter&gt;</code> HTML element represents either a scalar value within a known range or a fractional value.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meter" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_meter.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-meter-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <optgroup> -->
+
+<h3 id="optgroup">&lt;optgroup&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;optgroup&gt;</code> HTML element creates a grouping of options within a <code>&lt;select&gt;</code> element.
+    <br>
+    <br>
+    In customizable <code>&lt;select&gt;</code> elements, the <code>&lt;legend&gt;</code> element is allowed as a child of <code>&lt;optgroup&lt;</code>, to provide a label that is easy to target and style. This replaces any text set in the <code>&lt;optgroup&gt;</code> element's label attribute, and it has the same semantics.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/optgroup" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_optgroup.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-optgroup-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <option> -->
+
+<h3 id="option">&lt;option&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;option&gt;</code> HTML element is used to define an item contained in a <code>&lt;select&gt;</code>, an <code>&lt;optgroup&gt;</code>, or a <code>&lt;datalist&gt;</code> element. As such, <code>&lt;option&gt;</code> can represent menu items in popups and other lists of items in an HTML document.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/option" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_option.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-option-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <output> -->
+
+<h3 id="output">&lt;output&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;output&gt;</code> HTML element is a container element into which a site or app can inject the results of a calculation or the outcome of a user action.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/output" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_output.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-output-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <progress> -->
+
+<h3 id="progress">&lt;progress&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;progress&gt;</code> HTML element displays an indicator showing the completion progress of a task, typically displayed as a progress bar.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/progress" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_progress.asp" target="_blank">W3S</a>
+/
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/progress#specifications" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <select> -->
+
+<h3 id="select">&lt;select&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;select&gt;</code> HTML element represents a control that provides a menu of options.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_select.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-select-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <selectedcontent> -->
+
+<h3 id="selectedcontent">&lt;selectedcontent&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;selectedcontent&gt;</code> HTML is used inside a <code>&lt;select&gt;</code> element to display the contents of its currently selected <code>&lt;option&gt;</code> within its first child <code>&lt;button&gt;</code>. This enables you to style all parts of a <code>&lt;select&gt;</code> element, referred to as "customizable selects".
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/selectedcontent" target="_blank">MDN</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-selectedcontent-element" target="_blank">Standard</a>
+</p>
+
+<hr>
+
+<!-- <textarea> -->
+
+<h3 id="textarea">&lt;textarea&gt;</h3>
+
+<h4 class="spaced-sub-title">Description:</h4>
+
+<p>
+    The <code>&lt;textarea&gt;</code> HTML element represents a multi-line plain-text editing control, useful when you want to allow users to enter a sizeable amount of free-form text, for example a comment on a review or feedback form.
+</p>
+
+<h4 class="spaced-sub-title">Links:</h4>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_textarea.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-textarea-element" target="_blank">Standard</a>
 </p>
 
 <hr>
