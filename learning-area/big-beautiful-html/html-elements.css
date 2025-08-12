@@ -11,6 +11,7 @@ body {
 
 main {
     max-width: 650px;
+    min-width: 50px;
 
     border: 3px solid black;
 
@@ -118,14 +119,17 @@ hr {
     .floating-menu {
         display: none;
     }
-
-    main {
-        align-self: center;
-    }
 }
 
 @media (width > 1155px) {
     .contents {
         display: none;
+    }
+}
+
+@media (width < 900px) {
+    main {
+        border: none;
+        padding: 10px;
     }
 }
