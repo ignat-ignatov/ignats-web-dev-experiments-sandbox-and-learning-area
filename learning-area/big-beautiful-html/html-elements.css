@@ -4,6 +4,9 @@ body {
     font-family: monospace;
     font-size: 16px;
     line-height: 1.6;
+
+    display: flex;
+    justify-content: space-around;
 }
 
 main {
@@ -11,14 +14,31 @@ main {
 
     border: 3px solid black;
 
-    margin-left: 10%;
-    margin-top: 50px;
-    margin-bottom: 100px;
-
     padding-left: 100px;
     padding-right: 120px;
     padding-top: 20px;
     padding-bottom: 50px;
+
+    order: 0;
+}
+
+/* Styling the floating side menu. */
+
+.floating-menu {
+    font-size: 0.9em;
+    width: auto;
+    height: 98vh;
+    overflow: auto;
+    padding-right: 2em;
+    padding-left: 1em;
+    scrollbar-width: thin;
+
+    order: 1;
+
+
+    position: sticky;
+    position: -webkit-sticky;
+    top: 1vh;
 }
 
 /* Styling the code snippets. */
@@ -92,74 +112,20 @@ hr {
     margin-top: 2.5em;
 }
 
-/* Styling the floating side menu. */
-
-.floating-menu {
-    font-size: 0.9em;
-    width: auto;
-    height: 90vh;
-    position: fixed;
-    right: 0;
-    margin-right: 10%;
-    overflow: auto;
-
-    padding-right: 2em;
-
-    scrollbar-width: thin;
-}
-
 /* Making the website responsive to the size of the viewport here. */
 
-@media (width < 1660px) {
-    .floating-menu {
-        margin-right: 5%;
-    }
-}
-
-@media (width < 1360px) {
-    main {
-        margin-left: 5%;
-        padding-right: 100px;
-    }
-
-    .floating-menu {
-        margin-right: 5%;
-    }
-}
-
-@media (width < 1260px) {
-    main {
-        margin-left: 5%;
-        padding-right: 100px;
-    }
-
-    .floating-menu {
-        margin-right: 1%;
-    }
-}
-
-@media (width < 1160px) {
-    main {
-        margin-left: 0;
-        margin: auto;
-        padding-right: 120px;
-    }
-
+@media (width < 1155px) {
     .floating-menu {
         display: none;
     }
+
+    main {
+        align-self: center;
+    }
 }
 
-@media (width < 900px) {
-    main {
-        margin-left: 0;
-        margin: auto;
-        padding-right: 0;
-        padding-left: 0;
-        border: none;
-    }
-
-    .floating-menu {
+@media (width > 1155px) {
+    .contents {
         display: none;
     }
 }
