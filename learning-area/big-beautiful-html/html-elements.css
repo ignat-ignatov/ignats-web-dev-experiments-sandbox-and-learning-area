@@ -11,7 +11,7 @@ body {
 
 main {
     max-width: 650px;
-    min-width: 50px;
+    min-width: 0;
 
     border: 3px solid black;
 
@@ -28,7 +28,7 @@ main {
 .floating-menu {
     font-size: 0.9em;
     width: auto;
-    height: 98vh;
+    height: 90vh;
     overflow: auto;
     padding-right: 2em;
     padding-left: 1em;
@@ -39,7 +39,7 @@ main {
 
     position: sticky;
     position: -webkit-sticky;
-    top: 1vh;
+    top: 5vh;
 }
 
 /* Styling the code snippets. */
@@ -121,7 +121,7 @@ hr {
     }
 }
 
-@media (width > 1155px) {
+@media (width >= 1155px) {
     .contents {
         display: none;
     }
