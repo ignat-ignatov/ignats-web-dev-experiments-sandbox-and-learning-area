@@ -6,22 +6,9 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Big Beautiful HTML Elements</title>
+    <title>Beautiful HTML Elements</title>
 
-    <link rel="stylesheet" href="html-elements.css">
-
-    <!-- Links to highlight.js that work for local dev environment: -->
-    <!--
-    <link rel="stylesheet" href="/libraries/highlightjs/styles/default.min.css">
-    <script src="/libraries/highlightjs/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-    -->
-
-    <!-- Links to highlight.js that correctly point to resources for GitHub Pages deployment from repo's root (currently not working, trying to figure out why): -->
-    <!--
-    <link rel="stylesheet" href="../../libraries/highlightjs/styles/default.min.css">
-    <script src="../../libraries/highlightjs/highlight.min.js"></script>
-    -->
+    <link href="styles/html-elements.css" rel="stylesheet">
 
     <!-- Links to highlight.js that work for local dev environment and for GitHub pages using cdnjs: -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
@@ -173,7 +160,7 @@
         <a href="#interactive-elements">Interactive elements</a>
         <ul>
             <li><a href="#dialog">dialog</a></li>
-            <li><a href="#summary">summary/details</a></li>
+            <li><a href="#details">details/summary</a></li>
         </ul>
     </li>
     <li>
@@ -227,7 +214,7 @@
 
 <!-- Introduction begins here. -->
 
-<h1>Big Beautiful HTML Elements</h1>
+<h1>Beautiful HTML Elements</h1>
 
 <p>
     In this document I am listing all the HTML elements with the purpose of studying them.
@@ -391,7 +378,7 @@
         <a href="#interactive-elements">Interactive elements</a>
         <ul>
             <li><a href="#dialog">dialog</a></li>
-            <li><a href="#summary">summary/details</a></li>
+            <li><a href="#details">details/summary</a></li>
         </ul>
     </li>
     <li>
@@ -4163,27 +4150,17 @@
 
 <hr>
 
-<!-- <summary> <details> -->
+<!-- <details> <summary> -->
 
-<h3 id="summary">&lt;summary/details&gt;</h3>
+<h3 id="details">&lt;details/summary&gt;</h3>
 
 <h4 class="spaced-sub-title">Description:</h4>
 
 <p>
-    Specifies a summary, caption, or legend for a details element's disclosure box. Clicking the <code>&lt;summary&gt;</code> element toggles the state of the parent <code>&lt;details&gt;</code> element open and closed.
+    The <code>&lt;details&gt;</code> element creates a disclosure widget in which information is visible only when the widget is toggled into an open state. A summary or label must be provided using the <code>&lt;summary&gt;</code> element.
 </p>
 
 <h4 class="spaced-sub-title">Links:</h4>
-
-<p>
-<strong>summary</strong>
-<br>
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/summary#specifications" target="_blank">MDN</a>
-/
-<a href="https://www.w3schools.com/tags/tag_summary.asp" target="_blank">W3S</a>
-/
-<a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-summary-element" target="_blank">Standard</a>
-</p>
 
 <p>
 <strong>details</strong>
@@ -4193,6 +4170,16 @@
 <a href="https://www.w3schools.com/tags/tag_details.asp" target="_blank">W3S</a>
 /
 <a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element" target="_blank">Standard</a>
+</p>
+
+<p>
+<strong>summary</strong>
+<br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/summary#specifications" target="_blank">MDN</a>
+/
+<a href="https://www.w3schools.com/tags/tag_summary.asp" target="_blank">W3S</a>
+/
+<a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-summary-element" target="_blank">Standard</a>
 </p>
 
 <hr>

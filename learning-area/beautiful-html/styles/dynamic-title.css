@@ -1,0 +1,23 @@
+body {
+    font-family: monospace;
+    font-size: 16px;
+    line-height: 1.6;
+
+    max-width: 800px;
+
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+pre code {
+    display: block;
+    padding: 20px;
+
+    border: 1px solid #999;
+    background-color: #eee;
+    
+    color: black;
+    text-wrap: wrap;
+}

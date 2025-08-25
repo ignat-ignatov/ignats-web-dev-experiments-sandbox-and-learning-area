@@ -23,6 +23,10 @@ main {
     order: 0;
 }
 
+a:visited {
+    color: blue;
+}
+
 /* Styling the floating side menu. */
 
 .floating-menu {
