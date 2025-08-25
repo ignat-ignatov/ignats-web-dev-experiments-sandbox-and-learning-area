@@ -6,7 +6,7 @@ Hi, I'm Ignat! Welcome to my little corner of the internet where I dive into the
 Think of this as my study notebook for web development. Here, I:
 - **Experiment with code**: I write small JavaScript and CSS projects to play around with concepts and get comfortable with coding.
 - **Systematize knowledge**: I love organizing what I learn, so you'll find notes, explanations, and even some ponderings that help me wrap my head around tricky topics.
-- **Focus on fundamentals**: This is mostly about vanilla web technologies—no frameworks (for now). I want to build a solid foundation before diving into the fancy stuff.
+- **Focus on fundamentals**: This is mostly about vanilla web technologies - no frameworks (for now). I want to build a solid foundation before diving into the fancy stuff.
 - **Learn Git and GitHub**: This repo is also my playground for understanding version control, testing deployments, and figuring out how GitHub works.
 
 ### Why is it public?
